@@ -4,16 +4,16 @@ import smtplib
 from email.mime.text import MIMEText
 import os
 
-# ========== 配置 ==========
+# ========== 配置区 ==========
 API_KEY = os.getenv("ANTHROPIC_API_KEY")
-API_URL = "https://api.storeapi.one/v1/messages"
-MODEL = "claude-3-haiku-20240307"
+API_URL = "https://api.storeapi.one/v1/chat/completions"
+MODEL = "claude-opus-5"  # 你的密钥支持模型
 
 MAIL_USER = os.getenv("MAIL_USER")
 MAIL_PASS = os.getenv("MAIL_PASS")
 MAIL_TO = os.getenv("MAIL_TO")
 
-# RSS源，BTC/ETH/XRP/SLO/DOGE + 美股宏观
+# RSS新闻源
 rss_list = [
     "https://www.coindesk.com/arc/outboundfeeds/rss/",
     "https://cointelegraph.com/rss",
@@ -23,7 +23,7 @@ rss_list = [
 news_blocks = []
 for url in rss_list:
     feed = feedparser.parse(url)
-    for entry in feed.entries[:5]: #每个源取最新5条
+    for entry in feed.entries[:5]:
         news_blocks.append(f"""标题：{entry.get('title','')}
 链接：{entry.get('link','')}
 摘要：{entry.get('summary','')}
@@ -36,9 +36,9 @@ prompt = f"""下面是最新金融加密货币新闻，请筛选BTC、ETH、XRP�
 {all_news}
 """
 
-# ========== 调用中转Claude API ==========
+# ========== OpenAI兼容格式请求中转API ==========
 headers = {
-    "x-api-key": API_KEY,
+    "Authorization": f"Bearer {API_KEY}",
     "Content-Type": "application/json"
 }
 payload = {
@@ -52,13 +52,12 @@ print(f"HTTP状态码：{resp.status_code}")
 result_json = resp.json()
 print(f"API完整返回：{result_json}")
 
-# 适配两种返回格式：Anthropic原生content格式 / OpenAI兼容choices格式
-if "content" in result_json:
-    summary_text = result_json["content"][0]["text"]
-elif "choices" in result_json:
-    summary_text = result_json["choices"][0]["message"]["content"]
-else:
-    raise Exception(f"API返回异常，没有找到内容字段：{result_json}")
+# 捕获API错误
+if "error" in result_json:
+    raise Exception(f"API调用错误：{result_json['error']}")
+
+# OpenAI兼容接口用 choices 获取结果
+summary_text = result_json["choices"][0]["message"]["content"]
 
 # ========== QQ邮箱SMTP发邮件 ==========
 msg = MIMEText(summary_text, "plain", "utf-8")
