@@ -2,7 +2,7 @@ name: 每日新闻简报
 on:
   schedule:
     - cron: '30 0 * * *'
-  workflow_dispatch # 开启手动运行按钮！
+  workflow_dispatch
 
 jobs:
   run-news:
@@ -28,7 +28,7 @@ jobs:
           MAIL_TO: ${{ secrets.MAIL_TO }}
         run: python news_summary.py
 
-      - name: 自动提交（防止仓库长期无提交定时任务暂停）
+      - name: 自动提交
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
