@@ -1,0 +1,52 @@
+# .github/workflows/daily_news.yml
+name: 每日新闻简报
+on:
+  schedule:
+    # UTC时间22点 = 北京时间 早上6点，每天自动执行
+    - cron: '0 22 * * *'
+  workflow_dispatch: # 支持网页手动点按钮测试
+
+jobs:
+  run-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取仓库代码
+        uses: actions/checkout@v4
+
+      - name: 安装Python环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖包
+        run: |
+          pip install anthropic feedparser requests
+
+      - name: 执行新闻抓取与Claude总结脚本
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MAIL_USER: ${{ secrets.MAIL_USER }}
+          MAIL_PASS: ${{ secrets.MAIL_PASS }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: python news_summary.py
+
+      - name: 发送新闻简报邮件
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.qq.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USER }}
+          password: ${{ secrets.MAIL_PASS }}
+          subject: 【每日新闻简报】${{ env.TODAY_DATE }}
+          to: ${{ secrets.MAIL_TO }}
+          from: 每日新闻助手<${{ secrets.MAIL_USER }}>
+          body: file://news_result.md
+
+      - name: 把简报文件提交回仓库（防止仓库长期无提交被暂停定时任务）
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add news_result.md
+          git commit -m "自动更新今日新闻简报 ${{ env.TODAY_DATE }}" || echo "无新文件跳过提交"
+          git push
