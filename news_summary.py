@@ -48,8 +48,17 @@ payload = {
 }
 
 resp = requests.post(API_URL, json=payload, headers=headers)
+print(f"HTTP状态码：{resp.status_code}")
 result_json = resp.json()
-summary_text = result_json["content"][0]["text"]
+print(f"API完整返回：{result_json}")
+
+# 适配两种返回格式：Anthropic原生content格式 / OpenAI兼容choices格式
+if "content" in result_json:
+    summary_text = result_json["content"][0]["text"]
+elif "choices" in result_json:
+    summary_text = result_json["choices"][0]["message"]["content"]
+else:
+    raise Exception(f"API返回异常，没有找到内容字段：{result_json}")
 
 # ========== QQ邮箱SMTP发邮件 ==========
 msg = MIMEText(summary_text, "plain", "utf-8")
