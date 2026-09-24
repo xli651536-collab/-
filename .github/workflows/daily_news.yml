@@ -1,36 +1,47 @@
-name: 每日新闻简报
+name: Daily News Digest
+
 on:
   schedule:
-    - cron: '30 0 * * *'
-  workflow_dispatch:
+    # 北京时间 08:20 = UTC 00:20 (北京时间 - 8小时)
+    # 注意：避开整点，降低GitHub Actions排队概率
+    - cron: '20 0 * * *'
+  workflow_dispatch:  # 保留手动触发
+
+permissions:
+  contents: read
 
 jobs:
-  run-news:
+  send-digest:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     steps:
-      - name: 拉取代码
+      - name: 检出代码
         uses: actions/checkout@v4
 
-      - name: 安装Python
+      - name: 设置 Python 环境
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
+          cache: 'pip'
 
-      - name: 安装依赖包
+      - name: 安装依赖
         run: |
-          pip install feedparser requests
+          pip install --upgrade pip
+          pip install feedparser requests python-dateutil pytz
 
-      - name: 执行新闻抓取与Claude总结脚本
+      - name: 运行新闻摘要脚本
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MAIL_USER: ${{ secrets.MAIL_USER }}
-          MAIL_PASS: ${{ secrets.MAIL_PASS }}
-          MAIL_TO: ${{ secrets.MAIL_TO }}
-        run: python news_summary.py
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+          CLAUDE_API_BASE: ${{ secrets.CLAUDE_API_BASE }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          RECIPIENT_EMAILS: ${{ secrets.RECIPIENT_EMAILS }}
+        run: python news_digest.py
 
-      - name: 自动提交
+      - name: 记录执行结果
+        if: always()
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git add .
-          git commit -m "Auto update report" || echo "nothing to commit"
+          echo "工作流执行完成于: $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')"
