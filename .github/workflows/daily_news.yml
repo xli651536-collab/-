@@ -21,8 +21,18 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
 
+      - name: 安装依赖
+        run: |
+          pip install --upgrade pip
+          pip install feedparser requests python-dateutil pytz
+
+      - name: 运行新闻摘要脚本
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MAIL_USER: ${{ secrets.MAIL_USER }}
+          MAIL_PASS: ${{ secrets.MAIL_PASS }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
       - name: 安装依赖
         run: |
           pip install --upgrade pip
@@ -40,92 +50,3 @@ jobs:
         if: always()
         run: |
           echo "工作流执行完成于: $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')"
-
----
-
-文件 2：news_digest.py（在仓库根目录）
-
-完整内容（只包含 Python，不包含 YAML）：
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-每日新闻摘要自动化脚本
-- 抓取美国、日本、加密投资类RSS新闻
-- 筛选过去24小时内的新闻
-- 周一额外增加上周会议与事件汇总
-- 调用Claude API生成中文摘要
-- 通过SMTP发送到多个邮箱
-"""
-
-import os
-import sys
-name: Daily News Digest
-
-on:
-  schedule:
-    - cron: '20 0 * * *'
-  workflow_dispatch:
-
-permissions:
-  contents: read
-
-jobs:
-  send-digest:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-
-    steps:
-      - name: 检出代码
-        uses: actions/checkout@v4
-
-      - name: 设置 Python 环境
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: 安装依赖
-        run: |
-          pip install --upgrade pip
-          pip install feedparser requests python-dateutil pytz
-
-      - name: 运行新闻摘要脚本
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MAIL_USER: ${{ secrets.MAIL_USER }}
-          MAIL_PASS: ${{ secrets.MAIL_PASS }}
-          MAIL_TO: ${{ secrets.MAIL_TO }}
-        run: python news_digest.py
-
-      - name: 记录执行结果
-        if: always()
-        run: |
-          echo "工作流执行完成于: $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')"
-
----
-
-文件 2：news_digest.py（在仓库根目录）
-
-完整内容（只包含 Python，不包含 YAML）：
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-每日新闻摘要自动化脚本
-- 抓取美国、日本、加密投资类RSS新闻
-- 筛选过去24小时内的新闻
-- 周一额外增加上周会议与事件汇总
-- 调用Claude API生成中文摘要
-- 通过SMTP发送到多个邮箱
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MAIL_USER: ${{ secrets.MAIL_USER }}
-          MAIL_PASS: ${{ secrets.MAIL_PASS }}
-          MAIL_TO: ${{ secrets.MAIL_TO }}
-        run: python news_digest.py
-
-      - name: 记录执行结果
-        if: always()
-        run: |
-          echo "工作流执行完成于: $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')"
-          ANTHROPIC_API_KEY: $
