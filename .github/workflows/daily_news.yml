@@ -2,16 +2,27 @@ name: Daily News Digest
 
 on:
   schedule:
-    - cron: '20 0 * * *'
+    # GitHub 使用 UTC 时间：UTC 00:05 = 北京时间 08:05
+    # GitHub 定时任务通常会延迟 5~20 分钟，所以提前一点，实际到达约 08:10~08:30
+    - cron: '5 0 * * *'
   workflow_dispatch:
+    inputs:
+      force_weekly:
+        description: '测试用：强制附带周报'
+        type: boolean
+        default: false
 
 permissions:
-  contents: read
+  contents: write   # 需要写权限，用来把每天的日报存档提交到 archive/，供周一周报使用
+
+concurrency:
+  group: daily-news
+  cancel-in-progress: false
 
 jobs:
   send-digest:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: 检出代码
@@ -23,22 +34,27 @@ jobs:
           python-version: '3.11'
 
       - name: 安装依赖
-        run: |
-          pip install --upgrade pip
-          pip install feedparser requests python-dateutil pytz
+        run: pip install feedparser requests markdown
 
-      - name: 运行新闻摘要脚本
+      - name: 生成并发送简报
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_BASE_URL: https://kitool.ai
+          CLAUDE_MODELS: claude-sonnet-5,claude-sonnet-4-6,claude-opus-4-6
           MAIL_USER: ${{ secrets.MAIL_USER }}
           MAIL_PASS: ${{ secrets.MAIL_PASS }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
-          MAIL_USER: ${{ secrets.MAIL_USER }}
-          MAIL_PASS: ${{ secrets.MAIL_PASS }}
-          MAIL_TO: ${{ secrets.MAIL_TO }}
+          FORCE_WEEKLY: ${{ inputs.force_weekly }}
         run: python news_digest.py
 
-      - name: 记录执行结果
-        if: always()
+      - name: 保存日报存档
         run: |
-          echo "工作流执行完成于: $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898932+github-actions[bot]@users.noreply.github.com"
+          git add archive/
+          if git diff --cached --quiet; then
+            echo "没有新的存档"
+          else
+            git commit -m "archive: $(TZ=Asia/Shanghai date +%F)"
+            git push
+          fi
