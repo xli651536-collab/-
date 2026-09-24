@@ -44,14 +44,34 @@ RSS_FEEDS = {
     ],
 }
 
-# 从环境变量读取配置
-CLAUDE_API_KEY = os.environ.get("CLAUDE_API_KEY", "")
-CLAUDE_API_BASE = os.environ.get("CLAUDE_API_BASE", "https://api.anthropic.com")
-SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.gmail.com")
-SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
-SMTP_USER = os.environ.get("SMTP_USER", "")
-SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "")
-RECIPIENT_EMAILS = os.environ.get("RECIPIENT_EMAILS", "").split(",")
+# 从环境变量读取配置（使用你已有的 Secrets 名称）
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+MAIL_USER = os.environ.get("MAIL_USER", "")
+MAIL_PASS = os.environ.get("MAIL_PASS", "")
+MAIL_TO = os.environ.get("MAIL_TO", "")
+
+# 解析收件人列表（支持逗号分隔）
+RECIPIENT_EMAILS = [email.strip() for email in MAIL_TO.split(",") if email.strip()]
+
+# SMTP 配置（根据发件邮箱自动判断）
+def get_smtp_config(email: str):
+    """根据邮箱地址自动判断SMTP配置"""
+    email_lower = email.lower()
+    if "gmail.com" in email_lower:
+        return "smtp.gmail.com", 587
+    elif "outlook.com" in email_lower or "hotmail.com" in email_lower:
+        return "smtp-mail.outlook.com", 587
+    elif "qq.com" in email_lower:
+        return "smtp.qq.com", 587
+    elif "163.com" in email_lower:
+        return "smtp.163.com", 465
+    elif "126.com" in email_lower:
+        return "smtp.126.com", 465
+    else:
+        # 默认使用Gmail配置
+        return "smtp.gmail.com", 587
+
+SMTP_HOST, SMTP_PORT = get_smtp_config(MAIL_USER)
 
 # 时区设置
 BEIJING_TZ = pytz.timezone("Asia/Shanghai")
@@ -134,7 +154,7 @@ def call_claude_api(prompt: str, max_tokens: int = 4000) -> Optional[str]:
     try:
         headers = {
             "Content-Type": "application/json",
-            "x-api-key": CLAUDE_API_KEY,
+            "x-api-key": ANTHROPIC_API_KEY,
             "anthropic-version": "2023-06-01",
         }
 
@@ -151,7 +171,7 @@ def call_claude_api(prompt: str, max_tokens: int = 4000) -> Optional[str]:
         }
 
         response = requests.post(
-            f"{CLAUDE_API_BASE.rstrip('/')}/v1/messages",
+            "https://api.anthropic.com/v1/messages",
             headers=headers,
             json=payload,
             timeout=60
@@ -223,7 +243,7 @@ def send_email(subject: str, body: str, recipients: List[str]) -> bool:
     try:
         # 创建邮件
         msg = MIMEMultipart("alternative")
-        msg["From"] = SMTP_USER
+        msg["From"] = MAIL_USER
         msg["To"] = ", ".join(recipients)
         msg["Subject"] = subject
 
@@ -233,17 +253,23 @@ def send_email(subject: str, body: str, recipients: List[str]) -> bool:
         <head>
             <meta charset="utf-8">
             <style>
-                body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }}
-                h2 {{ color: #2563eb; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px; }}
-                h3 {{ color: #4b5563; margin-top: 24px; }}
+                body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background: #f9fafb; }}
+                .container {{ background: white; padding: 32px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }}
+                h2 {{ color: #2563eb; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px; margin-top: 24px; }}
+                h3 {{ color: #4b5563; margin-top: 20px; }}
                 a {{ color: #2563eb; text-decoration: none; }}
                 a:hover {{ text-decoration: underline; }}
-                code {{ background: #f3f4f6; padding: 2px 6px; border-radius: 3px; }}
-                pre {{ background: #f9fafb; padding: 12px; border-radius: 6px; overflow-x: auto; }}
+                pre {{ background: #f3f4f6; padding: 16px; border-radius: 6px; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; }}
+                .footer {{ margin-top: 32px; padding-top: 16px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 14px; text-align: center; }}
             </style>
         </head>
         <body>
-            <pre>{body}</pre>
+            <div class="container">
+                <pre>{body}</pre>
+                <div class="footer">
+                    📧 此邮件由 GitHub Actions 自动发送 | ⏰ 每日 08:20 定时推送
+                </div>
+            </div>
         </body>
         </html>
         """
@@ -254,8 +280,9 @@ def send_email(subject: str, body: str, recipients: List[str]) -> bool:
         # 发送邮件
         print(f"\n📧 连接 SMTP 服务器 {SMTP_HOST}:{SMTP_PORT}...")
         with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30) as server:
+            server.set_debuglevel(0)  # 设置为1可以看到详细调试信息
             server.starttls()
-            server.login(SMTP_USER, SMTP_PASSWORD)
+            server.login(MAIL_USER, MAIL_PASS)
             server.send_message(msg)
 
         print(f"✅ 邮件发送成功！收件人: {', '.join(recipients)}")
@@ -263,6 +290,8 @@ def send_email(subject: str, body: str, recipients: List[str]) -> bool:
 
     except Exception as e:
         print(f"❌ 邮件发送失败: {e}")
+        import traceback
+        traceback.print_exc()
         return False
 
 
@@ -277,15 +306,27 @@ def main():
     print("=" * 60)
 
     # 检查必要的环境变量
-    if not CLAUDE_API_KEY:
-        print("❌ 错误: 未配置 CLAUDE_API_KEY")
+    missing_configs = []
+    if not ANTHROPIC_API_KEY:
+        missing_configs.append("ANTHROPIC_API_KEY")
+    if not MAIL_USER:
+        missing_configs.append("MAIL_USER")
+    if not MAIL_PASS:
+        missing_configs.append("MAIL_PASS")
+    if not MAIL_TO:
+        missing_configs.append("MAIL_TO")
+
+    if missing_configs:
+        print(f"❌ 错误: 缺少以下必要的 GitHub Secrets 配置:")
+        for config in missing_configs:
+            print(f"   - {config}")
         sys.exit(1)
-    if not SMTP_USER or not SMTP_PASSWORD:
-        print("❌ 错误: 未配置 SMTP 账号信息")
-        sys.exit(1)
-    if not RECIPIENT_EMAILS or RECIPIENT_EMAILS == [""]:
-        print("❌ 错误: 未配置收件人邮箱")
-        sys.exit(1)
+
+    print(f"\n✅ 配置检查通过:")
+    print(f"   - API Key: {ANTHROPIC_API_KEY[:20]}...")
+    print(f"   - 发件邮箱: {MAIL_USER}")
+    print(f"   - SMTP服务器: {SMTP_HOST}:{SMTP_PORT}")
+    print(f"   - 收件人: {', '.join(RECIPIENT_EMAILS)}")
 
     # 获取当前时间（北京时间）
     now_beijing = datetime.now(BEIJING_TZ)
@@ -345,7 +386,26 @@ def main():
 if __name__ == "__main__":
     main()
 
-3. 上传到 GitHub 仓库的步骤
+主要调整说明：
+
+✅ 适配你的 Secrets 配置：
+
+1. 环境变量名称：
+   - ANTHROPIC_API_KEY（你的）← 之前是 CLAUDE_API_KEY
+   - MAIL_USER（你的）← 之前是 SMTP_USER
+   - MAIL_PASS（你的）← 之前是 SMTP_PASSWORD
+   - MAIL_TO（你的）← 之前是 RECIPIENT_EMAILS
+2. 自动识别 SMTP 服务器：
+   - 根据 MAIL_USER 的邮箱域名自动判断 SMTP 配置
+   - 支持 Gmail、Outlook、QQ、163、126 邮箱
+   - 不需要额外配置 SMTP_HOST 和 SMTP_PORT
+3. 多收件人支持：
+        print("步骤 3/3: 发送邮件")
+        print("=" * 60)
+
+        subject = f"📰 每日新闻摘要 - {now_beijing.strftime('%Y年%m月%d日')}"
+        if is_monday:
+            subject += " (含上周汇总)"
 
         success = send_email(subject, summary, RECIPIENT_EMAILS)
 
@@ -365,3 +425,12 @@ if __name__ == "__main__":
         import traceback
         traceback.print_exc()
         sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
+   - ANTHROPIC_API_KEY（你的）← 之前是 CLAUDE_API_KEY
+   - MAIL_USER（你的）← 之前是 SMTP_USER
+   - MAIL_PASS（你的）← 之前是 SMTP_PASSWORD
+   - MAIL_TO（你的）← 之前是 RECI
+2. 点击 Add file → Create new fil
