@@ -2,10 +2,8 @@ name: Daily News Digest
 
 on:
   schedule:
-    # 北京时间 08:20 = UTC 00:20 (北京时间 - 8小时)
-    # 注意：避开整点，降低GitHub Actions排队概率
     - cron: '20 0 * * *'
-  workflow_dispatch:  # 保留手动触发
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -43,7 +41,11 @@ jobs:
         run: |
           echo "工作流执行完成于: $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')"
 
-2. 调整后的 news_digest.py
+---
+
+文件 2：news_digest.py（在仓库根目录）
+
+完整内容（只包含 Python，不包含 YAML）：
 
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
@@ -58,41 +60,17 @@ jobs:
 
 import os
 import sys
-import json
-import smtplib
-import feedparser
-import requests
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from datetime import datetime, timedelta
-from dateutil import parser as date_parser
-import pytz
-from typing import List, Dict, Optional
+name: Daily News Digest
 
+on:
+  schedule:
+    - cron: '20 0 * * *'
+  workflow_dispatch:
 
-# ==================== 配置 ====================
+permissions:
+  contents: read
 
-# RSS 订阅源
-RSS_FEEDS = {
-    "美国新闻": [
-        "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-        "https://feeds.washingtonpost.com/rss/world",
-        "https://www.reuters.com/rssfeed/worldNews",
-    ],
-    "日本新闻": [
-        "https://www3.nhk.or.jp/rss/news/cat0.xml",
-        "https://www.japantimes.co.jp/feed/",
-    ],
-    "加密投资": [
-        "https://cointelegraph.com/rss",
-        "https://decrypt.co/feed",
-        "https://www.coindesk.com/arc/outboundfeeds/rss/",
-        "https://cryptonews.com/news/feed/",
-    ],
-}
-
-# 从环境变量读取配置（使用你已有的 Secrets 名称）
-ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+jobs:
   send-digest:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -124,4 +102,30 @@ ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
         if: always()
         run: |
           echo "工作流执行完成于: $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')"
+
+---
+
+文件 2：news_digest.py（在仓库根目录）
+
+完整内容（只包含 Python，不包含 YAML）：
+
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+每日新闻摘要自动化脚本
+- 抓取美国、日本、加密投资类RSS新闻
+- 筛选过去24小时内的新闻
+- 周一额外增加上周会议与事件汇总
+- 调用Claude API生成中文摘要
+- 通过SMTP发送到多个邮箱
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MAIL_USER: ${{ secrets.MAIL_USER }}
+          MAIL_PASS: ${{ secrets.MAIL_PASS }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: python news_digest.py
+
+      - name: 记录执行结果
+        if: always()
+        run: |
+          echo "工作流执行完成于: $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')"
+          ANTHROPIC_API_KEY: $
