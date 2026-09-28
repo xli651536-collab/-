@@ -54,18 +54,27 @@ RSS_FEEDS = {
         "https://decrypt.co/feed",
         "https://www.theblock.co/rss.xml",
         "https://cryptoslate.com/feed/",
+        "https://bitcoinmagazine.com/.rss/full/",     # Bitcoin Magazine
+        "https://cryptobriefing.com/feed/",           # Crypto Briefing
+        "https://beincrypto.com/feed/",               # BeInCrypto（全球视角）
     ],
-    "美国市场": [
+    "美国市场与宏观": [
         "https://www.cnbc.com/id/10000664/device/rss/rss.html",   # CNBC Markets
         "https://www.cnbc.com/id/20910258/device/rss/rss.html",   # CNBC Economy
         "https://feeds.content.dowjones.io/public/rss/mw_topstories",  # MarketWatch
-        "https://finance.yahoo.com/news/rssindex",
+        "https://www.ft.com/?format=rss",             # Financial Times
+        "https://www.bloomberg.com/feeds/podcasts/etf.xml",  # Bloomberg ETF
     ],
     "日本": [
-        "https://coinpost.jp/?feed=rss2",                # CoinPost 日本加密货币
-        "https://www.coindeskjapan.com/feed/",           # CoinDesk Japan
-        "https://www3.nhk.or.jp/rss/news/cat5.xml",      # NHK 经济
-        "https://asia.nikkei.com/rss/feed/nar",          # Nikkei Asia
+        "https://coinpost.jp/?feed=rss2",             # CoinPost 日本加密
+        "https://www.coindeskjapan.com/feed/",        # CoinDesk Japan
+        "https://jp.cointelegraph.com/rss",           # Cointelegraph 日本
+        "https://www3.nhk.or.jp/rss/news/cat5.xml",  # NHK 经济（有时无内容）
+    ],
+    "国际重大新闻": [
+        "https://feeds.bbci.co.uk/news/world/rss.xml",   # BBC World
+        "https://www.aljazeera.com/xml/rss/all.xml",     # Al Jazeera
+        "https://rss.reuters.com/reuters/topNews",        # Reuters Top News
     ],
 }
 
@@ -204,7 +213,9 @@ SYSTEM_PROMPT = """你是一位资深的加密货币与宏观投资分析师，�
 - 只依据提供的资料总结，不要编造资料中没有的事实、数字或事件
 - 重要新闻在句末附上原文链接，格式：[来源](链接)
 - 使用 Markdown 输出：标题用 ##，表格用标准 Markdown 表格
-- 重点关注 BTC、ETH、SOL、XRP；其他币种只写真正重大的事件（如大额黑客攻击、ETF、监管、主网升级、暴涨暴跌）
+- 加密货币是核心：BTC、ETH、SOL、XRP 必须覆盖；其他币种只写真正重大的事件（黑客攻击、ETF、监管、主网升级、暴涨暴跌等）
+- 不限于美国和日本，全球范围内的加密货币重要资讯都要汇总
+- 国际重大新闻（非加密货币）如有值得关注的，单独列出一小节
 - 结尾加一行免责声明：以上内容仅供参考，不构成投资建议"""
 
 
@@ -544,6 +555,8 @@ def build_ics(events: list) -> str:
         description = "\n".join(note_parts)
 
         impact = ev.get("impact", "medium")
+        # 颜色：高影响用红色，中影响用黄色（iCalendar COLOR 属性，谷歌日历支持）
+        color = "#E53935" if impact == "high" else "#F9A825"
         # 高影响：两次提醒（15分钟前 + 准时）；中影响：只提前 15 分钟
         alarms = [("提醒：{}", -15)]
         if impact == "high":
@@ -555,9 +568,10 @@ def build_ics(events: list) -> str:
             f"DTSTAMP:{ics_dt(NOW)}",
             f"DTSTART:{ics_dt(start)}",
             f"DTEND:{ics_dt(start + timedelta(minutes=30))}",
-            f"SUMMARY:{ics_escape(summary)}",
+            f"SUMMARY:{ics_escape(('🔴 ' if impact == 'high' else '🟡 ') + summary)}",
             f"DESCRIPTION:{ics_escape(description)}",
             f"CATEGORIES:{'高影响' if impact == 'high' else '中影响'}",
+            f"COLOR:{color}",
         ]
 
         for alarm_tmpl, offset_min in alarms:
