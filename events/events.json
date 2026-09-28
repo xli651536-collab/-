@@ -1,0 +1,145 @@
+{
+  "updated": "2026-09-28T18:20:31+08:00",
+  "events": [
+    {
+      "id": "ai-e52099ec82a6",
+      "start": "2026-09-29T09:00:00+08:00",
+      "impact": "high",
+      "title": "美国NEAR现物ETF开始交易",
+      "note": "Bitwise的NEAR Protocol现货ETF（代码NRR）已获NYSE Arca上市批准和SEC注册生效，预计最快9月29日开始交易，这是美国首只NEAR现货ETF，且该ETF将进行全量质押获取收益。Bitwise报告预测2030年NEAR价格可能大幅上涨。此事件标志着美国加密ETF产品线进一步扩展到智能合约平台，可能吸引机构资金流入NEAR生态，需关注上市首日交易量和溢价情况。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://coinpost.jp/?p=739487",
+      "source": "news"
+    },
+    {
+      "id": "ff-202609291400-usd-cb-consumer-confidence",
+      "start": "2026-09-29T22:00:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国9月消费者信心指数",
+      "note": "世界大型企业联合会（CB）发布的消费者信心指数，预期90.1高于前值89.4，显示美国消费者信心略有改善。若实际值超预期，通常利好美元和美股，对BTC等风险资产构成短期压力；若不及预期，则可能提振避险情绪，需关注数据公布后市场对美联储政策预期的调整。",
+      "detail": "CB Consumer Confidence | 预期 90.1 | 前值 89.4",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202609291400-usd-jolts-job-openings",
+      "start": "2026-09-29T22:00:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国8月职位空缺数",
+      "note": "JOLTS职位空缺数反映劳动力市场需求，预期723万略低于前值727万，暗示就业市场温和降温。若大幅低于预期，可能引发美联储降息预期升温，利好风险资产包括BTC；若高于预期，则强化经济韧性预期，美元走强可能打压加密货币。需结合周三ADP数据和周五非农数据综合判断。",
+      "detail": "JOLTS Job Openings | 预期 7.23M | 前值 7.27M",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202609301215-usd-adp-non-farm-employment-change",
+      "start": "2026-09-30T20:15:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国9月ADP就业人数",
+      "note": "ADP私营部门就业人数变化，预期新增7万人大幅高于前值3.8万人，显示就业市场预期回暖。作为周五非农数据的前瞻指标，若实际值强于预期，可能提振美元并打压BTC；若弱于预期，则增强降息预期，利好风险资产。需警惕数据与非农出现背离的情况。",
+      "detail": "ADP Non-Farm Employment Change | 预期 70K | 前值 38K",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202609301230-usd-core-pce-price-index-m-m",
+      "start": "2026-09-30T20:30:00+08:00",
+      "impact": "high",
+      "title": "🇺🇸 美国8月核心PCE物价指数月率",
+      "note": "美联储最看重的通胀指标，预期月率0.3%高于前值0.2%，显示通胀压力回升。若实际值符合或超预期，将强化美联储鹰派立场，美元走强压制BTC等风险资产；若低于预期，则降息预期升温利好加密货币。该数据对美联储11月政策决定至关重要，需高度关注。",
+      "detail": "Core PCE Price Index m/m | 预期 0.3% | 前值 0.2%",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202609301230-usd-final-gdp-q-q",
+      "start": "2026-09-30T20:30:00+08:00",
+      "impact": "high",
+      "title": "🇺🇸 美国二季度GDP终值",
+      "note": "美国第二季度GDP年化季率终值，预期与修正值持平为1.5%。作为最终修正数据，通常市场反应有限，但若大幅偏离预期，仍可能影响美元走势。需结合当前三季度经济表现综合判断，关注是否与当前市场对经济放缓的预期一致。",
+      "detail": "Final GDP q/q | 预期 1.5% | 前值 1.5%",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202609301230-usd-final-gdp-price-index-q-q",
+      "start": "2026-09-30T20:30:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国二季度GDP物价指数终值",
+      "note": "衡量GDP中物价变动的指标，预期与修正值持平为6.4%的高位。若实际值上修，将强化通胀担忧和美联储鹰派预期，利空风险资产；若下修，则缓解通胀压力。该数据与核心PCE共同构成本周通胀图景，需关注两者是否传递一致信号。",
+      "detail": "Final GDP Price Index q/q | 预期 6.4% | 前值 6.4%",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610011230-usd-unemployment-claims",
+      "start": "2026-10-01T20:30:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国上周初请失业金人数",
+      "note": "每周劳动力市场健康度指标，预期19.9万人略高于前值19.7万人，显示就业市场稳定。若大幅高于预期，暗示就业市场恶化，可能提振降息预期利好BTC；若低于预期，则强化经济韧性，美元走强压制风险资产。作为高频数据，对短期市场情绪影响显著。",
+      "detail": "Unemployment Claims | 预期 199K | 前值 197K",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610011400-usd-fomc-member-waller-speaks",
+      "start": "2026-10-01T22:00:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美联储理事沃勒讲话",
+      "note": "美联储理事沃勒将发表讲话，作为FOMC投票委员，其言论对政策预期影响重大。需关注其对当前通胀、就业数据的解读，以及对11月议息会议的政策倾向暗示。若释放鹰派信号，美元走强压制BTC；若偏鸽派，则利好风险资产。建议实时关注讲话要点。",
+      "detail": "FOMC Member Waller Speaks | 预期 - | 前值 -",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610011400-usd-ism-manufacturing-pmi",
+      "start": "2026-10-01T22:00:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国9月ISM制造业PMI",
+      "note": "ISM制造业采购经理人指数，预期55.0略低于前值54.6但仍处于扩张区间。若实际值高于预期，显示制造业保持强劲，利好美元压制BTC；若跌破50荣枯线，则引发经济衰退担忧，可能提振降息预期利好风险资产。需关注新订单和就业分项指标。",
+      "detail": "ISM Manufacturing PMI | 预期 55.0 | 前值 54.6",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610012330-jpy-tokyo-core-cpi-y-y",
+      "start": "2026-10-02T07:30:00+08:00",
+      "impact": "medium",
+      "title": "🇯🇵 日本东京10月核心CPI年率",
+      "note": "东京核心CPI是全国CPI的前瞻指标，预期2.4%大幅高于前值1.8%，显示通胀压力回升。若符合或超预期，将强化日本央行加息预期，日元走强可能带动全球避险情绪，对BTC构成压力；若低于预期，则日元承压，利好风险资产。需关注日本央行后续政策信号。",
+      "detail": "Tokyo Core CPI y/y | 预期 2.4% | 前值 1.8%",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610021230-usd-average-hourly-earnings-m-m",
+      "start": "2026-10-02T20:30:00+08:00",
+      "impact": "high",
+      "title": "🇺🇸 美国9月平均时薪月率",
+      "note": "衡量工资增长和通胀压力的关键指标，预期月率0.3%与前值持平。若高于预期，显示工资通胀压力持续，强化美联储鹰派立场，美元走强压制BTC；若低于预期，则缓解通胀担忧，利好风险资产。该数据与非农就业数据同时公布，市场影响力巨大。",
+      "detail": "Average Hourly Earnings m/m | 预期 0.3% | 前值 0.3%",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610021230-usd-non-farm-employment-change",
+      "start": "2026-10-02T20:30:00+08:00",
+      "impact": "high",
+      "title": "🇺🇸 美国9月非农就业人数",
+      "note": "市场最关注的就业数据，预期新增9.8万人大幅低于前值16.2万人，显示就业市场明显降温。若实际值远低于预期，将引发经济衰退担忧和降息预期升温，大幅利好BTC等风险资产；若超预期强劲,则美元暴涨压制加密货币。该数据对美联储11月政策至关重要，需高度警惕。",
+      "detail": "Non-Farm Employment Change | 预期 98K | 前值 162K",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610021230-usd-unemployment-rate",
+      "start": "2026-10-02T20:30:00+08:00",
+      "impact": "high",
+      "title": "🇺🇸 美国9月失业率",
+      "note": "预期维持4.1%不变，显示劳动力市场稳定。若失业率意外上升,将引发经济衰退担忧,提振降息预期利好BTC；若下降,则显示就业市场韧性,美元走强压制风险资产。需结合非农就业人数和时薪数据综合判断劳动力市场真实状况,关注市场对美联储政策路径的重新定价。",
+      "detail": "Unemployment Rate | 预期 4.1% | 前值 4.1%",
+      "link": "",
+      "source": "calendar"
+    }
+  ]
+}
