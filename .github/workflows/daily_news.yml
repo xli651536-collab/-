@@ -2,9 +2,9 @@ name: Daily News Digest
 
 on:
   schedule:
-    # GitHub 使用 UTC 时间：UTC 00:05 = 北京时间 08:05
-    # GitHub 定时任务通常会延迟 5~20 分钟，所以提前一点，实际到达约 08:10~08:30
-    - cron: '5 0 * * *'
+    # 备用触发：UTC 02:17 = 北京时间 10:17（GitHub 定时任务经常延迟数小时，只作兜底）
+    # 主触发由 cron-job.org 在北京时间 08:20 调用 workflow_dispatch
+    - cron: '17 2 * * *'
   workflow_dispatch:
     inputs:
       force_weekly:
@@ -28,15 +28,27 @@ jobs:
       - name: 检出代码
         uses: actions/checkout@v4
 
+      - name: 检查今天是否已发送
+        id: check
+        run: |
+          TODAY=$(TZ=Asia/Shanghai date +%F)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -f "archive/sent/$TODAY" ]; then
+            echo "今天已经发送过，备用任务跳过"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: 设置 Python 环境
+        if: steps.check.outputs.skip != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: 安装依赖
+        if: steps.check.outputs.skip != 'true'
         run: pip install feedparser requests markdown
 
       - name: 生成并发送简报
+        if: steps.check.outputs.skip != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_BASE_URL: https://kitool.ai
@@ -48,7 +60,10 @@ jobs:
         run: python news_digest.py
 
       - name: 保存日报存档
+        if: steps.check.outputs.skip != 'true'
         run: |
+          mkdir -p archive/sent
+          touch "archive/sent/$(TZ=Asia/Shanghai date +%F)"
           git config user.name "github-actions[bot]"
           git config user.email "41898932+github-actions[bot]@users.noreply.github.com"
           git add archive/
