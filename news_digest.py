@@ -71,10 +71,14 @@ RSS_FEEDS = {
         "https://jp.cointelegraph.com/rss",           # Cointelegraph 日本
         "https://www3.nhk.or.jp/rss/news/cat5.xml",  # NHK 经济（有时无内容）
     ],
+    "中国市场": [
+        "https://www.scmp.com/rss/92/feed",                        # SCMP Business
+        "https://www.cnbc.com/id/19832390/device/rss/rss.html",    # CNBC Asia-Pacific
+    ],
     "国际重大新闻": [
-        "https://feeds.bbci.co.uk/news/world/rss.xml",   # BBC World
-        "https://www.aljazeera.com/xml/rss/all.xml",     # Al Jazeera
-        "https://rss.reuters.com/reuters/topNews",        # Reuters Top News
+        "https://feeds.bbci.co.uk/news/world/rss.xml",             # BBC World
+        "https://www.aljazeera.com/xml/rss/all.xml",               # Al Jazeera
+        "https://www.cnbc.com/id/100727362/device/rss/rss.html",   # CNBC World
     ],
 }
 
@@ -213,9 +217,10 @@ SYSTEM_PROMPT = """你是一位资深的加密货币与宏观投资分析师，�
 - 只依据提供的资料总结，不要编造资料中没有的事实、数字或事件
 - 重要新闻在句末附上原文链接，格式：[来源](链接)
 - 使用 Markdown 输出：标题用 ##，表格用标准 Markdown 表格
-- 加密货币是核心：BTC、ETH、SOL、XRP 必须覆盖；其他币种只写真正重大的事件（黑客攻击、ETF、监管、主网升级、暴涨暴跌等）
-- 不限于美国和日本，全球范围内的加密货币重要资讯都要汇总
-- 国际重大新闻（非加密货币）如有值得关注的，单独列出一小节
+- 读者关注的优先级：加密货币 > 美股 > 中国股市（A股/港股）；篇幅也按这个比例分配
+- 加密货币：BTC、ETH、SOL、XRP 必须覆盖；其他币种只写真正重大的事件（黑客攻击、ETF、监管、主网升级、暴涨暴跌等）；不限国家，全球的重要加密资讯都要汇总
+- 国际新闻只写对美债收益率、美股、加密货币或中国股市有实际影响的，并说明影响方向；没有就不写
+- 标注"可选"的板块，如果资料里没有相关内容，整个板块（包括标题）直接省略，不要写"暂无"或"无重大消息"
 - 结尾加一行免责声明：以上内容仅供参考，不构成投资建议"""
 
 
@@ -263,10 +268,17 @@ def build_daily_prompt(news: dict, prices: str, calendar: str) -> str:
 ## 🔥 今日最重要的 3 件事
 ## 🪙 主流币重点
 （BTC / ETH / SOL / XRP 分别 1~3 条，没有重要消息就写"无重大消息"）
-## 🌐 其他币种与行业大事
-## 🇺🇸 美国：宏观、监管与美股
-## 🇯🇵 日本：政策、监管与市场
-（日文资料请翻译成中文）
+## 🌐 其他币种与全球加密行业大事（可选）
+（不限国家；日文等外文资料请翻译成中文）
+## 🇺🇸 美股与美国宏观
+（大盘与板块表现、重要财报、美联储与经济数据、监管）
+## 🏦 影响美债的国际新闻（可选）
+（不限国家：央行政策、地缘冲突、油价与通胀冲击、主权债务与评级、美国财政赤字与发债、日本/中国等海外持有者动向等。
+每条写清：事件 → 美债收益率可能上行还是下行 → 对美股和加密货币意味着什么）
+## 🇨🇳 中国股市（可选）
+（A股/港股重要动态与政策）
+## 🌍 其他国际重大新闻（可选）
+（只写对市场有影响的，最多 3 条）
 ## 📅 今日关注（北京时间）
 （根据经济日历和新闻列出今天/未来 24 小时的重要数据发布、会议、解锁、升级等）
 ## ⚠️ 风险提示
@@ -289,8 +301,10 @@ def build_weekly_prompt(history: str, prices: str, calendar: str) -> str:
 ## 📈 上周市场回顾
 （BTC / ETH / SOL / XRP 一周走势与驱动因素，结合 7d 涨跌幅）
 ## 🗞️ 上周十大要闻
-## 🇺🇸 美国宏观与监管一周回顾
-## 🇯🇵 日本一周回顾
+## 🇺🇸 美股与美国宏观一周回顾
+## 🏦 美债与利率一周回顾（可选）
+（影响美债收益率的国内外事件，以及对美股和加密货币的传导）
+## 🇨🇳 中国股市一周回顾（可选）
 ## 🔭 本周前瞻
 （根据本周经济日历列出关键日程，并说明可能的影响）
 ## 💡 本周操作关注点
@@ -523,7 +537,7 @@ def ics_dt(dt: datetime) -> str:
     return utc.strftime("%Y%m%dT%H%M%SZ")
 
 
-def build_ics(events: list) -> str:
+def build_ics(events: list, cal_name: str = "📈 投资日历") -> str:
     """把事件列表渲染为 .ics 文件内容"""
     lines = [
         "BEGIN:VCALENDAR",
@@ -531,7 +545,7 @@ def build_ics(events: list) -> str:
         "PRODID:-//news-bot//daily-digest//ZH",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
-        f"X-WR-CALNAME:📈 投资日历",
+        f"X-WR-CALNAME:{cal_name}",
         f"X-WR-TIMEZONE:Asia/Shanghai",
         f"REFRESH-INTERVAL;VALUE=DURATION:PT8H",
         f"X-PUBLISHED-TTL:PT8H",
@@ -628,9 +642,15 @@ def update_ics(calendar_events: list | None) -> None:
     ]
     events_to_write.sort(key=lambda e: e["start"])
 
+    # 谷歌日历会忽略订阅日历里的 VALARM，只能按整个日历设置提醒，
+    # 所以按重要程度拆成两个日历分别订阅；events.ics 保留全部事件
+    high = [e for e in events_to_write if e.get("impact") == "high"]
+    medium = [e for e in events_to_write if e.get("impact") != "high"]
     ICS_FILE.parent.mkdir(exist_ok=True)
     ICS_FILE.write_text(build_ics(events_to_write), encoding="utf-8")
-    print(f"📅 events.ics 已生成：共 {len(events_to_write)} 个事件")
+    (ICS_FILE.parent / "high.ics").write_text(build_ics(high, "🔴 投资日历·重要"), encoding="utf-8")
+    (ICS_FILE.parent / "medium.ics").write_text(build_ics(medium, "🟡 投资日历·中等"), encoding="utf-8")
+    print(f"📅 日历已生成：重要 {len(high)} 个，中等 {len(medium)} 个，合计 {len(events_to_write)} 个")
 
 
 # ==================== 邮件 ====================
