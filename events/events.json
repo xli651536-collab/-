@@ -1,36 +1,6 @@
 {
-  "updated": "2026-10-02T08:20:42+08:00",
+  "updated": "2026-10-03T08:20:28+08:00",
   "events": [
-    {
-      "id": "ai-e52099ec82a6",
-      "start": "2026-09-29T09:00:00+08:00",
-      "impact": "high",
-      "title": "美国NEAR现物ETF开始交易",
-      "note": "Bitwise的NEAR Protocol现货ETF（代码NRR）已获NYSE Arca上市批准和SEC注册生效，预计最快9月29日开始交易，这是美国首只NEAR现货ETF，且该ETF将进行全量质押获取收益。Bitwise报告预测2030年NEAR价格可能大幅上涨。此事件标志着美国加密ETF产品线进一步扩展到智能合约平台，可能吸引机构资金流入NEAR生态，需关注上市首日交易量和溢价情况。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://coinpost.jp/?p=739487",
-      "source": "news"
-    },
-    {
-      "id": "ff-202609291400-usd-cb-consumer-confidence",
-      "start": "2026-09-29T22:00:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美国9月CB消费者信心指数",
-      "note": "衡量美国消费者对经济状况的信心水平。预期89.2略低于前值89.4，显示消费者信心小幅走弱。若实际值大幅低于预期，可能打压美元和美股，对BTC等风险资产构成短期压力；若高于预期则提振市场情绪，利好风险资产。需警惕数据与就业、通胀数据出现背离时的市场波动。",
-      "detail": "CB Consumer Confidence | 预期 89.2 | 前值 89.4",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202609291400-usd-jolts-job-openings",
-      "start": "2026-09-29T22:00:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美国8月职位空缺数",
-      "note": "反映劳动力市场需求强度的关键指标。预期723万略低于前值727万，显示就业市场降温迹象。若大幅低于预期，可能引发美联储政策转向预期，短期利好美债但打压美元和风险资产；若高于预期则强化紧缩预期，对BTC等加密货币形成压力。需关注与非农数据的一致性。",
-      "detail": "JOLTS Job Openings | 预期 7.23M | 前值 7.27M",
-      "link": "",
-      "source": "calendar"
-    },
     {
       "id": "ff-202609301215-usd-adp-non-farm-employment-change",
       "start": "2026-09-30T20:15:00+08:00",
