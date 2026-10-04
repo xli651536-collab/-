@@ -1,46 +1,6 @@
 {
-  "updated": "2026-10-03T08:20:28+08:00",
+  "updated": "2026-10-04T08:20:30+08:00",
   "events": [
-    {
-      "id": "ff-202609301215-usd-adp-non-farm-employment-change",
-      "start": "2026-09-30T20:15:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美国9月ADP就业人数",
-      "note": "ADP非农就业人数反映私营部门就业变化，预期增加7.3万人，高于前值3.8万人，显示就业市场改善。若数据强于预期，通常利好美元，可能施压风险资产如BTC；若弱于预期则相反。需警惕与周五非农数据的背离，可能引发市场波动。",
-      "detail": "ADP Non-Farm Employment Change | 预期 73K | 前值 38K",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202609301230-usd-core-pce-price-index-m-m",
-      "start": "2026-09-30T20:30:00+08:00",
-      "impact": "high",
-      "title": "🇺🇸 美国9月核心PCE月率",
-      "note": "核心PCE物价指数是美联储最看重的通胀指标，预期月率0.3%，高于前值0.2%，显示通胀压力上升。若数据高于预期，市场将预期美联储维持鹰派立场，利好美元但打压美股和BTC等风险资产；低于预期则相反。这是本周最重要的通胀数据，对市场情绪影响极大。",
-      "detail": "Core PCE Price Index m/m | 预期 0.3% | 前值 0.2%",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202609301230-usd-final-gdp-q-q",
-      "start": "2026-09-30T20:30:00+08:00",
-      "impact": "high",
-      "title": "🇺🇸 美国Q3终值GDP季率",
-      "note": "终值GDP季率预期维持1.5%，与修正值持平。作为终值数据，通常市场反应温和，除非大幅偏离预期。若上修，显示经济韧性强于预期，利好美元；若下修则相反。需结合PCE数据综合判断经济与通胀走势对美联储政策的影响。",
-      "detail": "Final GDP q/q | 预期 1.5% | 前值 1.5%",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202609301230-usd-final-gdp-price-index-q-q",
-      "start": "2026-09-30T20:30:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美国Q3终值GDP平减指数",
-      "note": "GDP平减指数反映经济整体通胀水平,预期季率6.4%与修正值持平。这一指标关注度低于核心PCE,但若大幅偏离预期仍可能影响市场对通胀的判断。高于预期强化加息预期,利好美元打压风险资产;低于预期则相反。需与PCE数据对照分析。",
-      "detail": "Final GDP Price Index q/q | 预期 6.4% | 前值 6.4%",
-      "link": "",
-      "source": "calendar"
-    },
     {
       "id": "ff-202610011230-usd-unemployment-claims",
       "start": "2026-10-01T20:30:00+08:00",
