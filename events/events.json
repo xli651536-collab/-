@@ -1,46 +1,6 @@
 {
-  "updated": "2026-10-04T08:20:30+08:00",
+  "updated": "2026-10-05T08:20:31+08:00",
   "events": [
-    {
-      "id": "ff-202610011230-usd-unemployment-claims",
-      "start": "2026-10-01T20:30:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美国上周初请失业金人数",
-      "note": "衡量劳动力市场健康度的关键指标。预期20.1万人，略高于前值19.7万人，显示就业市场小幅降温。若实际值大幅超预期，表明劳动力市场走弱,美联储降息预期升温,利好BTC等风险资产;反之若低于预期,美元走强,风险资产承压。需警惕数据大幅偏离预期引发市场剧烈波动。",
-      "detail": "Unemployment Claims | 预期 201K | 前值 197K",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202610011400-usd-fomc-member-waller-speaks",
-      "start": "2026-10-01T22:00:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美联储委员沃勒讲话",
-      "note": "FOMC投票委员沃勒的讲话将透露美联储对当前经济和货币政策的最新看法。作为鹰派代表,若其释放鹰派信号强调通胀压力,美元走强打压风险资产;若偏鸽派暗示降息空间,利好BTC和美股。需密切关注其对10月非农、通胀路径和利率政策的表态,市场可能根据措辞调整降息预期。",
-      "detail": "FOMC Member Waller Speaks | 预期 - | 前值 -",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202610011400-usd-ism-manufacturing-pmi",
-      "start": "2026-10-01T22:00:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美国9月ISM制造业PMI",
-      "note": "反映制造业景气度的领先指标。预期54.8,高于前值54.6,显示制造业扩张加速。若实际值高于预期,表明经济韧性强,美元走强但可能推迟降息预期,对风险资产影响中性偏负;若低于50荣枯线,经济衰退担忧升温,美股承压但降息预期升温可能利好BTC。需关注新订单和就业分项。",
-      "detail": "ISM Manufacturing PMI | 预期 54.8 | 前值 54.6",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202610012330-jpy-tokyo-core-cpi-y-y",
-      "start": "2026-10-02T07:30:00+08:00",
-      "impact": "medium",
-      "title": "🇯🇵 日本东京核心CPI年率",
-      "note": "该数据是日本全国CPI的领先指标，预期从前值1.8%大幅升至2.4%，若兑现将强化日本央行年内加息预期，推动日元走强。日元走强通常伴随套息交易平仓风险，可能导致日股、美股及BTC等风险资产承压，需留意数据远超预期时的联动抛售。",
-      "detail": "Tokyo Core CPI y/y | 预期 2.4% | 前值 1.8%",
-      "link": "",
-      "source": "calendar"
-    },
     {
       "id": "ff-202610021230-usd-average-hourly-earnings-m-m",
       "start": "2026-10-02T20:30:00+08:00",
@@ -72,6 +32,16 @@
       "source": "calendar"
     },
     {
+      "id": "ff-202610051400-usd-ism-services-pmi",
+      "start": "2026-10-05T22:00:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国9月ISM服务业PMI",
+      "note": "衡量美国服务业景气状况，预期55.1，低于前值55.4，显示服务业扩张略有放缓。若数据低于预期，可能强化美联储降息预期，利好美股和BTC等风险资产；若超预期走强，则可能推升美元、压制风险资产。需警惕数据与通胀分项联动引发的加息担忧。",
+      "detail": "ISM Services PMI | 预期 55.1 | 前值 55.4",
+      "link": "",
+      "source": "calendar"
+    },
+    {
       "id": "ai-59eee7699323",
       "start": "2026-10-06T09:00:00+08:00",
       "impact": "high",
@@ -79,6 +49,36 @@
       "note": "以太坊基金会将于10月6日在Sepolia测试网启动Glamsterdam升级,引入ePBS和BAL等技术以提升L1处理能力。这是以太坊重要技术升级的测试阶段,成功后将为主网实施铺平道路。若测试顺利,可能提振市场对ETH技术进步的信心;若出现重大问题,可能引发短期负面情绪。主网实施时间尚未确定,需关注后续公告。\n（新闻未给出具体时间，按当天 09:00 提醒）",
       "detail": "",
       "link": "https://coinpost.jp/?p=739966",
+      "source": "news"
+    },
+    {
+      "id": "ff-202610060635-jpy-boj-gov-ueda-speaks",
+      "start": "2026-10-06T14:35:00+08:00",
+      "impact": "high",
+      "title": "🇯🇵 日本央行植田行长讲话",
+      "note": "市场关注植田对货币政策正常化路径的表态，尤其是加息节奏和购债缩减计划。若言论偏鹰派，日元可能走强，套利交易平仓压力加大，对全球风险资产（含BTC）构成流动性收紧风险；若偏鸽派则缓解担忧。需警惕其对日债收益率和日元套息交易的直接影响。",
+      "detail": "BOJ Gov Ueda Speaks | 预期 - | 前值 -",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610071800-usd-fomc-meeting-minutes",
+      "start": "2026-10-08T02:00:00+08:00",
+      "impact": "high",
+      "title": "🇺🇸 美联储9月议息会议纪要",
+      "note": "纪要将披露联储内部对降息路径、通胀和就业的分歧，是判断后续利率走向的重要线索。若纪要偏鸽派，有利美股和BTC上行，美元承压；若显示官员对再次降息更谨慎，可能引发美元反弹和风险资产回调。需关注委员对关税和通胀粘性的讨论。",
+      "detail": "FOMC Meeting Minutes | 预期 - | 前值 -",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ai-21f80e763800",
+      "start": "2026-10-08T09:00:00+08:00",
+      "impact": "medium",
+      "title": "日本10月8日数据或引发法国国债危机外溢",
+      "note": "一家东京基金抛售法债，市场关注10月8日日本相关数据能否显示法国国债危机是否外溢至日本及全球市场。若危机扩散，可能引发避险情绪升温，影响包括BTC在内的风险资产走势，需关注日债收益率联动反应。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://beincrypto.com/french-bond-crisis-japan-data-bitcoin/",
       "source": "news"
     },
     {
@@ -100,6 +100,36 @@
       "detail": "",
       "link": "https://coinpost.jp/?p=740156",
       "source": "news"
+    },
+    {
+      "id": "ff-202610081230-usd-unemployment-claims",
+      "start": "2026-10-08T20:30:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国初请失业金人数",
+      "note": "预期20万人，略高于前值19.7万，反映劳动力市场边际走弱。数据若大幅高于预期，会强化降息预期，短期可能提振BTC和美股但也可能引发经济衰退担忧；若明显低于预期，则降息概率下降，美元或走强，风险资产承压。需留意数据背后的政府停摆或统计扰动因素。",
+      "detail": "Unemployment Claims | 预期 200K | 前值 197K",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610091400-usd-prelim-uom-consumer-sentiment",
+      "start": "2026-10-09T22:00:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国密歇根大学消费者信心初值",
+      "note": "预期47.6，较前值47.8小幅走弱，反映消费者对经济前景仍偏谨慎。信心数据疲软可能加剧经济放缓担忧，对美股情绪不利，但若伴随通胀预期回落，也可能支持降息交易，间接利好BTC。需关注消费信心与通胀预期数据的组合信号。",
+      "detail": "Prelim UoM Consumer Sentiment | 预期 47.6 | 前值 47.8",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610091400-usd-prelim-uom-inflation-expectations",
+      "start": "2026-10-09T22:00:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国密歇根大学通胀预期初值",
+      "note": "前值4.6%，处于较高水平，反映居民对未来通胀的担忧仍未消退。若该数据继续走高，将削弱美联储降息空间，推升美元并压制BTC和美股；若明显回落，则强化降息预期，利好风险资产。需警惕高通胀预期与消费信心疲软并存的滞胀式组合。",
+      "detail": "Prelim UoM Inflation Expectations | 预期 - | 前值 4.6%",
+      "link": "",
+      "source": "calendar"
     },
     {
       "id": "ai-5bd495a42ee6",
