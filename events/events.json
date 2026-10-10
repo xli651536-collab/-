@@ -1,26 +1,6 @@
 {
-  "updated": "2026-10-09T08:20:32+08:00",
+  "updated": "2026-10-10T08:20:29+08:00",
   "events": [
-    {
-      "id": "ai-59eee7699323",
-      "start": "2026-10-06T09:00:00+08:00",
-      "impact": "high",
-      "title": "以太坊Glamsterdam测试网上线",
-      "note": "以太坊基金会将于10月6日在Sepolia测试网启动Glamsterdam升级,引入ePBS和BAL等技术以提升L1处理能力。这是以太坊重要技术升级的测试阶段,成功后将为主网实施铺平道路。若测试顺利,可能提振市场对ETH技术进步的信心;若出现重大问题,可能引发短期负面情绪。主网实施时间尚未确定,需关注后续公告。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://coinpost.jp/?p=739966",
-      "source": "news"
-    },
-    {
-      "id": "ff-202610060635-jpy-boj-gov-ueda-speaks",
-      "start": "2026-10-06T14:35:00+08:00",
-      "impact": "high",
-      "title": "🇯🇵 日本央行行长植田和男讲话",
-      "note": "植田讲话常被市场解读为日本央行利率路径与干预汇市意愿的信号。若言论偏鹰（暗示加息或缩表），日元可能走强，带动套息交易平仓压力，对美股和BTC等风险资产形成短期压力；若偏鸽，则风险资产情绪偏暖。需警惕措辞被过度解读引发日元剧烈波动。",
-      "detail": "BOJ Gov Ueda Speaks | 预期 - | 前值 -",
-      "link": "",
-      "source": "calendar"
-    },
     {
       "id": "ff-202610071800-usd-fomc-meeting-minutes",
       "start": "2026-10-08T02:00:00+08:00",
@@ -100,6 +80,16 @@
       "detail": "Prelim UoM Inflation Expectations | 预期 - | 前值 4.6%",
       "link": "",
       "source": "calendar"
+    },
+    {
+      "id": "ai-2c5ac3707763",
+      "start": "2026-10-12T09:00:00+08:00",
+      "impact": "medium",
+      "title": "全球最大XRP保有企业Evernorth纳斯达克上市",
+      "note": "世界最大的XRP保有上场企业Evernorth（原Evens）完成与Almada的业务整合后，将于10月12日在纳斯达克以代码XRPN开始交易。此次上市可能加速机构对XRP生态的采纳，提升XRP在传统金融市场的认可度和流动性，值得关注其上市首日表现及对XRP价格的潜在提振作用。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://coinpost.jp/?p=742247",
+      "source": "news"
     },
     {
       "id": "ai-5bd495a42ee6",
