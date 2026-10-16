@@ -1,16 +1,6 @@
 {
-  "updated": "2026-10-15T08:20:30+08:00",
+  "updated": "2026-10-16T08:20:36+08:00",
   "events": [
-    {
-      "id": "ai-2c5ac3707763",
-      "start": "2026-10-12T09:00:00+08:00",
-      "impact": "medium",
-      "title": "全球最大XRP保有企业Evernorth纳斯达克上市",
-      "note": "世界最大的XRP保有上场企业Evernorth（原Evens）完成与Almada的业务整合后，将于10月12日在纳斯达克以代码XRPN开始交易。此次上市可能加速机构对XRP生态的采纳，提升XRP在传统金融市场的认可度和流动性，值得关注其上市首日表现及对XRP价格的潜在提振作用。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://coinpost.jp/?p=742247",
-      "source": "news"
-    },
     {
       "id": "ai-f8c83253a8b4",
       "start": "2026-10-13T09:00:00+08:00",
@@ -142,14 +132,34 @@
       "source": "calendar"
     },
     {
+      "id": "ai-c9c4e9078349",
+      "start": "2026-10-16T09:00:00+08:00",
+      "impact": "medium",
+      "title": "日本东京股东总会审议Metaplanet对SuperLeague出资案",
+      "note": "美国上市公司SuperLeague Enterprise的股东总会将于10月16日审议Metaplanet以2100枚BTC进行现物出资的提案。若获批,Metaplanet将成为SuperLeague的控股方,并将其比特币战略推广至美国市场。SuperLeague已于10日完成首次1 BTC购买。该交易将是日本加密企业国际化的重要案例,需关注股东投票结果及对两公司股价和BTC持仓策略的影响。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://coinpost.jp/?p=743106",
+      "source": "news"
+    },
+    {
       "id": "ff-202610160330-usd-fed-chairman-warsh-speaks",
       "start": "2026-10-16T11:30:00+08:00",
       "impact": "high",
       "title": "🇺🇸 美联储主席沃什讲话",
-      "note": "美联储主席沃什的公开讲话通常会释放货币政策信号，对市场影响巨大。此次讲话在一系列通胀和消费数据公布后进行，市场将密切关注其对近期数据的解读、对10月利率决议的暗示以及对经济前景的判断。若偏鹰派（强调抗通胀），美元将走强、风险资产承压；若偏鸽派（关注经济放缓），则利好BTC等风险资产。需警惕即兴问答环节的意外表态。",
+      "note": "美联储主席凯文·沃什(Kevin Warsh)将发表讲话。市场将密切关注其对通胀、利率路径和经济前景的表态。若暗示维持鹰派立场或进一步加息可能,美元可能走强,美股和BTC等风险资产承压;若释放鸽派信号则相反。需警惕沃什对AI投资泡沫风险、财政赤字或地缘政治的评论,这些可能引发市场剧烈波动。",
       "detail": "Fed Chairman Warsh Speaks | 预期 - | 前值 -",
       "link": "",
       "source": "calendar"
+    },
+    {
+      "id": "ai-4f83c9724ce3",
+      "start": "2026-10-21T09:00:00+08:00",
+      "impact": "medium",
+      "title": "Ledger新设备Atom开始预订",
+      "note": "硬件钱包厂商Ledger发布新设备Ledger Atom(售价849美元),仅支持数据功能并配备硬件审批,计划2027年交付。此举是对近期供应链攻击的回应——有犯罪分子篡改现有钱包导致用户资金被盗。新设备强化防篡改检测功能,但高售价和延迟交付可能影响市场接受度。投资者需关注加密钱包安全标准的演变对自托管信任度的影响。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://cryptoslate.com/ledger-wants-customers-to-trust-its-new-849-device-as-criminals-compromise-existing-wallets/",
+      "source": "news"
     },
     {
       "id": "ai-96ca04f9c2bb",
@@ -159,6 +169,16 @@
       "note": "Solana将进行重大的Alpenglow升级，计划在主网进行实时共识替换，最终确认时间可缩短至约150毫秒（提速99%），需协调验证者切换。这是Solana历史上最重大的技术升级之一，若成功将大幅提升网络性能和用户体验，增强其在高频交易和DeFi领域的竞争力，利好SOL价格；但升级过程中需警惕网络不稳定和验证者协调失败的风险，可能导致短期波动。\n（新闻未给出具体时间，按当天 09:00 提醒）",
       "detail": "",
       "link": "https://cryptoslate.com/solana-sets-october-21-for-massive-alpenglow-upgrade-that-could-make-transactions-99-faster-to-finalize/",
+      "source": "news"
+    },
+    {
+      "id": "ai-aecca90eb8d0",
+      "start": "2026-10-25T09:00:00+08:00",
+      "impact": "medium",
+      "title": "巴西总统选举第二轮投票",
+      "note": "巴西将举行总统选举第二轮投票,右翼候选人博尔索纳罗(Bolsonaro)与左翼卢拉(Lula)对决。最新民调显示博尔索纳罗领先2个百分点。选举结果将影响巴西的财政政策、监管环境和对加密货币的态度。博尔索纳罗倾向市场化改革,卢拉则主张加强社会支出。需关注选后雷亚尔汇率波动及对拉美加密市场的连锁反应。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://www.aljazeera.com/news/2026/10/15/poll-shows-bolsonaro-with-slight-lead-over-lula-ahead-of-brazilian-run-off",
       "source": "news"
     }
   ]
