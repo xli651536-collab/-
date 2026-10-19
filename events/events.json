@@ -1,76 +1,6 @@
 {
-  "updated": "2026-10-18T08:20:28+08:00",
+  "updated": "2026-10-19T08:20:30+08:00",
   "events": [
-    {
-      "id": "ai-5d570d9b0c0b",
-      "start": "2026-10-15T09:00:00+08:00",
-      "impact": "medium",
-      "title": "特斯拉Roadster配SpaceX推进器悬浮演示",
-      "note": "特斯拉计划10月15日展示配备SpaceX推进器的新Roadster悬浮功能。历史数据显示特斯拉重大产品发布后TSLA股价波动剧烈，可能引发科技股和风险资产连带反应。需关注演示是否成功、市场对马斯克技术整合的评价，以及对特斯拉估值和AI/科技板块情绪的影响。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://beincrypto.com/tesla-roadster-hover-demo-tsla-stock-impact/",
-      "source": "news"
-    },
-    {
-      "id": "ff-202610151230-usd-core-ppi-m-m",
-      "start": "2026-10-15T20:30:00+08:00",
-      "impact": "high",
-      "title": "🇺🇸 美国9月核心PPI月率",
-      "note": "核心生产者物价指数剔除食品和能源，衡量批发层面通胀压力。预期0.3%高于前值0.2%，显示上游成本压力上升。若数据超预期，将强化美联储鹰派立场，推高美元、打压美股和BTC等风险资产；若低于预期，则可能缓解市场对持续通胀的担忧，利好风险资产。需警惕数据与CPI背离时市场的解读分歧。",
-      "detail": "Core PPI m/m | 预期 0.3% | 前值 0.2%",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202610151230-usd-core-retail-sales-m-m",
-      "start": "2026-10-15T20:30:00+08:00",
-      "impact": "high",
-      "title": "🇺🇸 美国9月核心零售销售月率",
-      "note": "核心零售销售剔除汽车销售，更准确反映消费者支出趋势。预期0.6%低于前值1.4%，显示消费增速放缓但仍保持正增长。若数据大幅不及预期，将引发经济衰退担忧，打压美元和美股，BTC可能因避险情绪分化；若超预期强劲，则支撑美元走强但可能加剧通胀预期。需关注与就业数据的配合度。",
-      "detail": "Core Retail Sales m/m | 预期 0.6% | 前值 1.4%",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202610151230-usd-ppi-m-m",
-      "start": "2026-10-15T20:30:00+08:00",
-      "impact": "high",
-      "title": "🇺🇸 美国9月PPI月率",
-      "note": "生产者物价指数是通胀领先指标，反映企业成本压力向消费端传导的可能性。预期0.6%高于前值0.4%，暗示通胀压力持续。若数据超预期，将增强市场对10月再次加息的押注，美元走强、美股和BTC承压；若低于预期，则缓解加息预期，利好风险资产。需警惕能源价格波动对数据的扰动。",
-      "detail": "PPI m/m | 预期 0.6% | 前值 0.4%",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202610151230-usd-retail-sales-m-m",
-      "start": "2026-10-15T20:30:00+08:00",
-      "impact": "high",
-      "title": "🇺🇸 美国9月零售销售月率",
-      "note": "零售销售是消费支出的直接指标,占美国GDP约70%。预期0.3%大幅低于前值1.2%，反映消费动能减弱。若数据不及预期，将引发经济放缓担忧，美元走弱、美股可能因衰退预期下跌，BTC走势将取决于市场对美联储政策转向的预期；若超预期，则支撑美元但可能推升通胀预期。需关注汽车销售的拖累程度。",
-      "detail": "Retail Sales m/m | 预期 0.3% | 前值 1.2%",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202610151230-usd-philly-fed-manufacturing-index",
-      "start": "2026-10-15T20:30:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美国10月费城联储制造业指数",
-      "note": "费城联储制造业指数是美国制造业景气度的重要先行指标。预期28.2低于前值37.8，显示制造业扩张速度放缓但仍处于扩张区间（高于0）。若数据意外转负，将引发制造业衰退担忧，打压美元和风险资产；若维持高位，则支撑经济韧性叙事。该指数波动较大，需结合ISM制造业PMI综合判断。",
-      "detail": "Philly Fed Manufacturing Index | 预期 28.2 | 前值 37.8",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202610151230-usd-unemployment-claims",
-      "start": "2026-10-15T20:30:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美国至10月11日当周初请失业金人数",
-      "note": "初请失业金人数是劳动力市场健康度的高频指标。预期19.9万人略高于前值19.7万人，显示就业市场小幅降温但仍保持韧性。若数据大幅超预期（如突破21万），将引发就业市场恶化担忧，打压美元并可能推动美联储转向鸽派，利好风险资产；若低于预期，则强化劳动力市场紧张叙事，支撑美元。需警惕飓风等季节性因素的扰动。",
-      "detail": "Unemployment Claims | 预期 199K | 前值 197K",
-      "link": "",
-      "source": "calendar"
-    },
     {
       "id": "ai-c9c4e9078349",
       "start": "2026-10-16T09:00:00+08:00",
@@ -110,6 +40,56 @@
       "detail": "",
       "link": "https://cryptoslate.com/solana-sets-october-21-for-massive-alpenglow-upgrade-that-could-make-transactions-99-faster-to-finalize/",
       "source": "news"
+    },
+    {
+      "id": "ff-202610221230-usd-unemployment-claims",
+      "start": "2026-10-22T20:30:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国首次申请失业救济人数",
+      "note": "预期20.0万，前值19.9万，变化不大，显示劳动力市场仍相对稳健。若数据明显高于预期，会强化经济放缓与美联储降息预期，短期利空美元、利好美股和BTC等风险资产；若明显低于预期则相反。需警惕数据大幅偏离预期引发市场剧烈波动。",
+      "detail": "Unemployment Claims | 预期 200K | 前值 199K",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610231345-usd-flash-manufacturing-pmi",
+      "start": "2026-10-23T21:45:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国10月制造业PMI初值",
+      "note": "预期55.5，前值57.0，预期明显回落，若落地则暗示制造业扩张动能减弱。数据不及预期可能加重经济放缓担忧，压制美元并提振降息预期，对美股和BTC偏利好；若意外走强则可能推升美元、压制风险资产，需警惕与服务业PMI走势分化。",
+      "detail": "Flash Manufacturing PMI | 预期 55.5 | 前值 57.0",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610231345-usd-flash-services-pmi",
+      "start": "2026-10-23T21:45:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国10月服务业PMI初值",
+      "note": "预期58.0，前值58.7，仍处于高景气区间但略有降温。服务业是美国经济主要支撑，若数据超预期走强可能推迟降息预期、提振美元压制BTC等风险资产；若走弱则强化软着陆或降息交易。需关注与制造业PMI的组合信号。",
+      "detail": "Flash Services PMI | 预期 58.0 | 前值 58.7",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610231400-usd-revised-uom-consumer-sentiment",
+      "start": "2026-10-23T22:00:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国10月密歇根消费者信心修正值",
+      "note": "预期与前值均为46.3，处于历史低位，反映消费者对经济前景较为悲观。若修正值明显上修，可能缓解衰退担忧利好美股和BTC；若进一步下修则可能加重避险情绪，需关注该指标与通胀预期数据的联动影响。",
+      "detail": "Revised UoM Consumer Sentiment | 预期 46.3 | 前值 46.3",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202610231400-usd-revised-uom-inflation-expectations",
+      "start": "2026-10-23T22:00:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国10月密歇根通胀预期修正值",
+      "note": "前值4.7%，处于偏高水平，反映居民对未来通胀的担忧仍较强。若修正值上调，会强化市场对美联储维持高利率更久的预期，利空美股和BTC、利好美元；若下修则相反。需警惕该数据与消费者信心数据同步公布时产生叠加效应。",
+      "detail": "Revised UoM Inflation Expectations | 预期 - | 前值 4.7%",
+      "link": "",
+      "source": "calendar"
     },
     {
       "id": "ai-aecca90eb8d0",
