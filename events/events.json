@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T08:20:32+08:00",
+  "updated": "2026-10-24T08:20:29+08:00",
   "events": [
     {
       "id": "ai-4f83c9724ce3",
@@ -122,6 +122,16 @@
       "source": "news"
     },
     {
+      "id": "ai-2cdfdf9f68ac",
+      "start": "2026-10-27T09:00:00+08:00",
+      "impact": "medium",
+      "title": "以太坊Glamsterdam测试网推迟上线",
+      "note": "以太坊基金会宣布下一次升级Glamsterdam在Hoodi测试网的上线被推迟，原因是需要进一步排查对主网智能合约的影响，新的上线日期尚未确定。该消息与已记录的10月27日Hoodi测试网安排存在冲突，提示升级进度可能晚于预期，需关注官方后续公告，短期内对ETH价格影响有限但增加时间不确定性。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://coinpost.jp/?p=744503",
+      "source": "news"
+    },
+    {
       "id": "ai-0adff2997936",
       "start": "2026-10-27T09:00:00+08:00",
       "impact": "high",
@@ -159,6 +169,36 @@
       "note": "破产交易所Mt.Gox原定10月31日的比特币偿还截止日期再度延期一年至2027年10月31日，这是第四次延期，原因是仍有大量债权人未完成手续。相关钱包持有约3.44万枚BTC，市场持续担忧这批筹码未来集中抛售对BTC价格造成的潜在抛压，需关注后续偿还进展。\n（新闻未给出具体时间，按当天 09:00 提醒）",
       "detail": "",
       "link": "https://coinpost.jp/?p=744045",
+      "source": "news"
+    },
+    {
+      "id": "ai-80f2cf72c21a",
+      "start": "2026-11-02T09:00:00+08:00",
+      "impact": "medium",
+      "title": "前HSBC保险高管加入友邦保险",
+      "note": "前汇丰保险业务全球负责人Edward Moncreiffe将于11月2日加入友邦保险（AIA）担任区域CEO，属于保险行业高管变动。此事件对加密市场直接影响有限，但反映传统金融机构高管流动频繁，可作为关注亚太金融行业动态的参考。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://www.scmp.com/business/banking-finance/article/3371907/former-hsbc-insurance-veteran-edward-moncreiffe-joins-aia-latest-senior-talent-move",
+      "source": "news"
+    },
+    {
+      "id": "ai-6a40cbb64b4f",
+      "start": "2026-11-03T09:00:00+08:00",
+      "impact": "high",
+      "title": "美国国会中期选举",
+      "note": "美国中期选举将于11月3日举行，选民调查显示政府腐败和经济不满是核心议题，共和党面临不利局面。选举结果可能影响后续财政、监管及加密政策走向，若出现阿拉斯加等州选举结果争议或司法介入，可能加剧市场对政治不确定性的担忧，建议关注选后美元、美股及BTC的联动反应。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://cryptobriefing.com/government-corruption-tops-voter-concerns-ahead-of-nov-3-midterms-cnbc-survey/",
+      "source": "news"
+    },
+    {
+      "id": "ai-1a4046cd5739",
+      "start": "2026-11-04T09:00:00+08:00",
+      "impact": "medium",
+      "title": "Moonshot AI开源Kimi K3.1 Pro模型权重",
+      "note": "Moonshot AI发布的Kimi K3.1 Pro在编程测试中接近Claude Opus 5.5水平，公司计划11月4日开放模型权重。AI模型竞争格局变化可能影响相关AI概念股和算力需求预期，间接影响加密市场中AI叙事相关代币的情绪，需关注开源后的实际性能验证与市场反应。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://cryptobriefing.com/moonshot-ai-launches-kimi-k3-1-pro-closing-in-on-claude-opus-5-5-in-coding-performance/",
       "source": "news"
     }
   ]
