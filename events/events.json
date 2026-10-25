@@ -1,26 +1,6 @@
 {
-  "updated": "2026-10-24T08:20:29+08:00",
+  "updated": "2026-10-25T08:20:35+08:00",
   "events": [
-    {
-      "id": "ai-4f83c9724ce3",
-      "start": "2026-10-21T09:00:00+08:00",
-      "impact": "medium",
-      "title": "Ledger新设备Atom开始预订",
-      "note": "硬件钱包厂商Ledger发布新设备Ledger Atom(售价849美元),仅支持数据功能并配备硬件审批,计划2027年交付。此举是对近期供应链攻击的回应——有犯罪分子篡改现有钱包导致用户资金被盗。新设备强化防篡改检测功能,但高售价和延迟交付可能影响市场接受度。投资者需关注加密钱包安全标准的演变对自托管信任度的影响。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://cryptoslate.com/ledger-wants-customers-to-trust-its-new-849-device-as-criminals-compromise-existing-wallets/",
-      "source": "news"
-    },
-    {
-      "id": "ai-96ca04f9c2bb",
-      "start": "2026-10-21T09:00:00+08:00",
-      "impact": "high",
-      "title": "Solana主网Alpenglow升级",
-      "note": "Solana将进行重大的Alpenglow升级，计划在主网进行实时共识替换，最终确认时间可缩短至约150毫秒（提速99%），需协调验证者切换。这是Solana历史上最重大的技术升级之一，若成功将大幅提升网络性能和用户体验，增强其在高频交易和DeFi领域的竞争力，利好SOL价格；但升级过程中需警惕网络不稳定和验证者协调失败的风险，可能导致短期波动。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://cryptoslate.com/solana-sets-october-21-for-massive-alpenglow-upgrade-that-could-make-transactions-99-faster-to-finalize/",
-      "source": "news"
-    },
     {
       "id": "ai-d38e03b518a8",
       "start": "2026-10-22T09:00:00+08:00",
@@ -199,6 +179,16 @@
       "note": "Moonshot AI发布的Kimi K3.1 Pro在编程测试中接近Claude Opus 5.5水平，公司计划11月4日开放模型权重。AI模型竞争格局变化可能影响相关AI概念股和算力需求预期，间接影响加密市场中AI叙事相关代币的情绪，需关注开源后的实际性能验证与市场反应。\n（新闻未给出具体时间，按当天 09:00 提醒）",
       "detail": "",
       "link": "https://cryptobriefing.com/moonshot-ai-launches-kimi-k3-1-pro-closing-in-on-claude-opus-5-5-in-coding-performance/",
+      "source": "news"
+    },
+    {
+      "id": "ai-f4c300fc1e3b",
+      "start": "2026-11-05T09:00:00+08:00",
+      "impact": "medium",
+      "title": "Zcash NU7升级上线主网",
+      "note": "Zcash官方宣布将于11月5日前后在主网实施下一次升级NU7，区块生成间隔将从75秒缩短至25秒，提升网络出块速度和交易确认效率。升级一般不会引发大幅价格波动，但需关注节点兼容性和矫正延期风险，持币者应确认交易所是否支持升级。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "",
       "source": "news"
     }
   ]
