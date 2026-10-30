@@ -1,16 +1,6 @@
 {
-  "updated": "2026-10-29T08:20:28+08:00",
+  "updated": "2026-10-30T08:20:28+08:00",
   "events": [
-    {
-      "id": "ai-cdc237bba208",
-      "start": "2026-10-26T09:00:00+08:00",
-      "impact": "high",
-      "title": "以太坊Hoodi测试：2亿Gas目标",
-      "note": "以太坊将在10月26日进行Hoodi的Glamsterdam测试，目标Gas限制为2亿，这是Pectra升级前的重要扩容测试。节点需要升级以参与测试。该测试对以太坊网络容量提升至关重要，可能影响ETH价格走势和Layer 2生态发展。需关注测试是否成功以及主网激活日期何时确定。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://cryptoslate.com/ethereum-sets-october-26-scaling-test-with-hoodi-node-upgrades-required/",
-      "source": "news"
-    },
     {
       "id": "ai-2cdfdf9f68ac",
       "start": "2026-10-27T09:00:00+08:00",
