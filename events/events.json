@@ -1,36 +1,6 @@
 {
-  "updated": "2026-10-30T08:20:28+08:00",
+  "updated": "2026-10-31T08:20:29+08:00",
   "events": [
-    {
-      "id": "ai-2cdfdf9f68ac",
-      "start": "2026-10-27T09:00:00+08:00",
-      "impact": "medium",
-      "title": "以太坊Glamsterdam测试网推迟上线",
-      "note": "以太坊基金会宣布下一次升级Glamsterdam在Hoodi测试网的上线被推迟，原因是需要进一步排查对主网智能合约的影响，新的上线日期尚未确定。该消息与已记录的10月27日Hoodi测试网安排存在冲突，提示升级进度可能晚于预期，需关注官方后续公告，短期内对ETH价格影响有限但增加时间不确定性。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://coinpost.jp/?p=744503",
-      "source": "news"
-    },
-    {
-      "id": "ai-0adff2997936",
-      "start": "2026-10-27T09:00:00+08:00",
-      "impact": "high",
-      "title": "以太坊Glamsterdam升级上线Hoodi测试网",
-      "note": "以太坊基金会宣布下一代升级Glamsterdam将于10月27日在Hoodi测试网启动，主网上线时间尚未确定。该升级将改变区块生成机制以提升处理能力，是ETH基础设施演进的重要一步，测试进展顺利与否将影响市场对主网时间表的预期，进而影响ETH价格情绪。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://coinpost.jp/?p=744050",
-      "source": "news"
-    },
-    {
-      "id": "ff-202610271400-usd-cb-consumer-confidence",
-      "start": "2026-10-27T22:00:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美国10月谘商会消费者信心指数",
-      "note": "衡量美国消费者对经济、就业和收入前景的信心。预期81.2，低于前值81.9，显示消费信心略有走弱。若数据不及预期，可能强化经济放缓担忧，利好降息预期，对美股和BTC偏利好；若大幅走弱则反映消费端疲软，需警惕衰退叙事升温打压风险资产。",
-      "detail": "CB Consumer Confidence | 预期 81.2 | 前值 81.9",
-      "link": "",
-      "source": "calendar"
-    },
     {
       "id": "ai-5d7e1d9bcb1e",
       "start": "2026-10-28T09:00:00+08:00",
@@ -219,6 +189,16 @@
       "note": "美国中期选举将于11月3日举行，选民调查显示政府腐败和经济不满是核心议题，共和党面临不利局面。选举结果可能影响后续财政、监管及加密政策走向，若出现阿拉斯加等州选举结果争议或司法介入，可能加剧市场对政治不确定性的担忧，建议关注选后美元、美股及BTC的联动反应。\n（新闻未给出具体时间，按当天 09:00 提醒）",
       "detail": "",
       "link": "https://cryptobriefing.com/government-corruption-tops-voter-concerns-ahead-of-nov-3-midterms-cnbc-survey/",
+      "source": "news"
+    },
+    {
+      "id": "ai-848898323b35",
+      "start": "2026-11-04T09:00:00+08:00",
+      "impact": "high",
+      "title": "Binance出金服务预计45小时后重启",
+      "note": "Binance称黑客攻击发现多个入侵点，出金服务按原计划在45小时后重启，并计划周一公布储备证明报告。重启进度和储备数据将决定市场对交易所偿付能力的信心，若延迟或数据不透明可能引发新一轮抛售和挤兑担忧。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://cryptobriefing.com/binance-first-proof-of-reserves-snapshot/",
       "source": "news"
     },
     {
