@@ -1,36 +1,6 @@
 {
-  "updated": "2026-11-06T08:20:32+08:00",
+  "updated": "2026-11-07T08:20:30+08:00",
   "events": [
-    {
-      "id": "ai-6a40cbb64b4f",
-      "start": "2026-11-03T09:00:00+08:00",
-      "impact": "high",
-      "title": "美国国会中期选举",
-      "note": "美国中期选举将于11月3日举行，选民调查显示政府腐败和经济不满是核心议题，共和党面临不利局面。选举结果可能影响后续财政、监管及加密政策走向，若出现阿拉斯加等州选举结果争议或司法介入，可能加剧市场对政治不确定性的担忧，建议关注选后美元、美股及BTC的联动反应。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://cryptobriefing.com/government-corruption-tops-voter-concerns-ahead-of-nov-3-midterms-cnbc-survey/",
-      "source": "news"
-    },
-    {
-      "id": "ff-202611031500-usd-jolts-job-openings",
-      "start": "2026-11-03T23:00:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美国9月JOLTS职位空缺",
-      "note": "衡量劳动力市场需求的滞后指标，预期7.15M略高于前值7.08M。若数据走强会强化就业市场韧性，降低美联储降息预期，对美元偏多、对BTC等风险资产偏空；若明显低于预期则可能加剧经济放缓担忧，但也可能提升降息概率，需结合当日其他数据综合判断。",
-      "detail": "JOLTS Job Openings | 预期 7.15M | 前值 7.08M",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202611031516-usd-congressional-elections",
-      "start": "2026-11-03T23:16:00+08:00",
-      "impact": "high",
-      "title": "🇺🇸 美国国会中期选举",
-      "note": "本次选举将决定国会两院控制权，直接影响后续财政、监管及加密货币立法方向。若民主党获胜，市场预期科技、加密及AI行业监管趋严，短期可能引发美股及BTC波动；共和党保持多数则有利于维持当前宽松监管环境。需警惕选举结果不确定或争议导致的市场剧烈波动。",
-      "detail": "Congressional Elections | 预期 - | 前值 -",
-      "link": "",
-      "source": "calendar"
-    },
     {
       "id": "ai-848898323b35",
       "start": "2026-11-04T09:00:00+08:00",
@@ -159,6 +129,16 @@
       "note": "新西兰将于11月7日举行大选，生活成本是选民关切焦点。选举结果可能影响该国财政与货币政策方向，虽对全球加密市场直接影响有限，但作为近期全球多国选举带来政策不确定性的延续，需关注其对发达市场风险偏好的边际影响。\n（新闻未给出具体时间，按当天 09:00 提醒）",
       "detail": "",
       "link": "https://www.bbc.co.uk/news/videos/cr86zxe1q5j3o?at_medium=RSS&at_campaign=rss",
+      "source": "news"
+    },
+    {
+      "id": "ai-126684abc6b8",
+      "start": "2026-11-09T09:00:00+08:00",
+      "impact": "medium",
+      "title": "Hypercore上线Anthropic上市前期权",
+      "note": "期权平台Hypercore将于11月9日推出追踪Anthropic未上市前预期股价的期权产品，现金结算、不涉及股权，美国客户不可用。该产品反映市场对Anthropic估值（传闻1.5万亿美元）的分歧，也side show了AI股估值争议是否会外溢至加密相关资产，需关注上线后的隐含估值走势。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://coinpost.jp/?p=746918",
       "source": "news"
     },
     {
