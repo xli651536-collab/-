@@ -1,46 +1,6 @@
 {
-  "updated": "2026-11-07T08:20:30+08:00",
+  "updated": "2026-11-08T08:20:30+08:00",
   "events": [
-    {
-      "id": "ai-848898323b35",
-      "start": "2026-11-04T09:00:00+08:00",
-      "impact": "high",
-      "title": "Binance出金服务预计45小时后重启",
-      "note": "Binance称黑客攻击发现多个入侵点，出金服务按原计划在45小时后重启，并计划周一公布储备证明报告。重启进度和储备数据将决定市场对交易所偿付能力的信心，若延迟或数据不透明可能引发新一轮抛售和挤兑担忧。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://cryptobriefing.com/binance-first-proof-of-reserves-snapshot/",
-      "source": "news"
-    },
-    {
-      "id": "ai-1a4046cd5739",
-      "start": "2026-11-04T09:00:00+08:00",
-      "impact": "medium",
-      "title": "Moonshot AI开源Kimi K3.1 Pro模型权重",
-      "note": "Moonshot AI发布的Kimi K3.1 Pro在编程测试中接近Claude Opus 5.5水平，公司计划11月4日开放模型权重。AI模型竞争格局变化可能影响相关AI概念股和算力需求预期，间接影响加密市场中AI叙事相关代币的情绪，需关注开源后的实际性能验证与市场反应。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://cryptobriefing.com/moonshot-ai-launches-kimi-k3-1-pro-closing-in-on-claude-opus-5-5-in-coding-performance/",
-      "source": "news"
-    },
-    {
-      "id": "ff-202611041500-usd-ism-services-pmi",
-      "start": "2026-11-04T23:00:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美国10月ISM服务业PMI",
-      "note": "衡量美国服务业景气度，预期54.8略低于前值54.9，仍处扩张区间。若数据不及预期，可能加深经济放缓担忧，提升降息预期，短期利好BTC等风险资产；若超预期则强美元压制黄金与加密货币。需警惕数据大幅偏离预期引发波动放大。",
-      "detail": "ISM Services PMI | 预期 54.8 | 前值 54.9",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ai-dadc01b87bd6",
-      "start": "2026-11-05T08:00:00+08:00",
-      "impact": "medium",
-      "title": "Mercado Bitcoin分阶段恢复服务",
-      "note": "巴西交易所Mercado Bitcoin因11月2日遭黑客攻击损失约3630万美元（已拦截1290万美元），宣布服务暂停后将分阶段重启。需关注其恢复进度及用户资产保障措施，事件进一步凸显交易所安全风险，可能影响市场对中心化平台信任度。",
-      "detail": "",
-      "link": "https://coinpost.jp/?p=746118",
-      "source": "news"
-    },
     {
       "id": "ai-f4c300fc1e3b",
       "start": "2026-11-05T09:00:00+08:00",
