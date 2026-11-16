@@ -1,16 +1,6 @@
 {
-  "updated": "2026-11-15T08:20:31+08:00",
+  "updated": "2026-11-16T08:20:31+08:00",
   "events": [
-    {
-      "id": "ff-202611121330-usd-unemployment-claims",
-      "start": "2026-11-12T21:30:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美国初请失业金人数",
-      "note": "公布上周初请失业金人数，预期19.4万，前值18.9万，小幅走高。若数据明显高于预期，可能强化劳动力市场降温信号，提振降息预期，短期利好美股和BTC等风险资产；若低于预期则可能压制降息预期，美元走强，加密货币承压。需警惕数据剧烈偏离预期引发波动放大。",
-      "detail": "Unemployment Claims | 预期 194K | 前值 189K",
-      "link": "",
-      "source": "calendar"
-    },
     {
       "id": "ai-f4ae1d28c673",
       "start": "2026-11-13T09:00:00+08:00",
@@ -52,6 +42,66 @@
       "source": "news"
     },
     {
+      "id": "ai-c6336245c35d",
+      "start": "2026-11-16T09:00:00+08:00",
+      "impact": "medium",
+      "title": "巴黎十所学校及五所大学周边禁止示威",
+      "note": "巴黎警方下令11月16日至20日期间禁止在10所学校和5所大学附近举行示威活动，属地方治安管制措施，直接市场影响有限，但反映欧洲社会紧张局势持续，可关注后续是否升级为更广泛的社会或政策事件。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://www.bbc.co.uk/news/articles/cqm2j0jvep4eo?at_medium=RSS&at_campaign=rss",
+      "source": "news"
+    },
+    {
+      "id": "ff-202611161700-usd-fed-chairman-warsh-speaks",
+      "start": "2026-11-17T01:00:00+08:00",
+      "impact": "high",
+      "title": "🇺🇸 美联储主席沃什发表讲话",
+      "note": "沃什作为美联储主席公开讲话，市场关注其对利率路径、通胀和就业的表态。若言论偏鹰派（强调通胀风险、暗示推迟降息），美元走强、美股和BTC承压；若偏鸽派，则利好风险资产。需警惕讲话中释放的政策信号超出市场预期，引发短线剧烈波动。",
+      "detail": "Fed Chairman Warsh Speaks | 预期 - | 前值 -",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ai-7081115ddc8c",
+      "start": "2026-11-17T09:00:00+08:00",
+      "impact": "high",
+      "title": "英伟达公布财报，黄仁勋去留成焦点",
+      "note": "英伟达将于11月17日发布财报，正值黄仁勋因间谍丑闻辞任CEO后、各方游说董事会让其回归的敏感时期，被称为公司历史上最受关注的一次财报电话会。财报结果及管理层表态可能大幅影响AI板块及美股科技股情绪，并通过风险偏好传导至BTC等资产，需警惕业绩或指引不及预期引发科技股连带抛售。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://beincrypto.com/jensen-huang-nvidia-ceo-comeback-stock/",
+      "source": "news"
+    },
+    {
+      "id": "ff-202611171330-usd-core-retail-sales-m-m",
+      "start": "2026-11-17T21:30:00+08:00",
+      "impact": "high",
+      "title": "🇺🇸 美国10月核心零售销售月率",
+      "note": "核心零售销售剔除汽车类别，反映居民消费韧性。预期0.4%明显低于前值0.9%，若实际进一步走弱，说明消费放缓，可能强化降息预期，短期利好BTC/美股但也可能被解读为经济走弱信号；若大幅超预期，则可能推升美元、压制风险资产。",
+      "detail": "Core Retail Sales m/m | 预期 0.4% | 前值 0.9%",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202611171330-usd-retail-sales-m-m",
+      "start": "2026-11-17T21:30:00+08:00",
+      "impact": "high",
+      "title": "🇺🇸 美国10月零售销售月率",
+      "note": "衡量整体消费支出变化，预期0.2%较前值0.8%大幅回落，显示消费增速放缓。数据弱于预期可能提升降息概率，短期提振BTC与美股；若意外走强，则美元或走强、风险资产承压。需留意与核心零售销售数据背离带来的解读分歧。",
+      "detail": "Retail Sales m/m | 预期 0.2% | 前值 0.8%",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202611181900-usd-fomc-meeting-minutes",
+      "start": "2026-11-19T03:00:00+08:00",
+      "impact": "high",
+      "title": "🇺🇸 美联储FOMC会议纪要",
+      "note": "公布上次议息会议详细讨论内容，市场借此判断内部对降息路径、通胀及就业的分歧程度。若纪要显示更多官员倾向鹰派立场，美元走强，美股和BTC承压；若显示鸽派倾向增多，则利好风险资产。需警惕措辞与会后声明出现明显落差，引发市场重新定价。",
+      "detail": "FOMC Meeting Minutes | 预期 - | 前值 -",
+      "link": "",
+      "source": "calendar"
+    },
+    {
       "id": "ai-dd24ef31f9a5",
       "start": "2026-11-19T09:00:00+08:00",
       "impact": "high",
@@ -70,6 +120,56 @@
       "detail": "",
       "link": "https://beincrypto.com/mystery-seller-data-center-loans-stargate/",
       "source": "news"
+    },
+    {
+      "id": "ff-202611191330-usd-philly-fed-manufacturing-index",
+      "start": "2026-11-19T21:30:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 费城联储制造业指数",
+      "note": "反映美国制造业活动景气程度，预期19.2低于前值20.9，显示制造业扩张动能略有减弱。数据大幅不及预期可能加重经济放缓担忧，对美股和BTC情绪偏负面；若好于预期，则支持经济韧性叙事，但也可能削弱降息预期。",
+      "detail": "Philly Fed Manufacturing Index | 预期 19.2 | 前值 20.9",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202611191330-usd-unemployment-claims",
+      "start": "2026-11-19T21:30:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国初请失业金人数",
+      "note": "周度劳动力市场数据，预期19.9万略低于前值20万，显示就业市场仍总体稳健。若数据明显走高，暗示劳动力市场降温加快，可能强化降息预期从而利好风险资产；若意外走低，则可能推迟降息预期，对BTC和美股形成压力。",
+      "detail": "Unemployment Claims | 预期 199K | 前值 200K",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202611201325-usd-fomc-member-waller-speaks",
+      "start": "2026-11-20T21:25:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美联储沃勒发表讲话",
+      "note": "沃勒是FOMC中较受关注的票委，其讲话常被视为政策风向标。若表态偏鸽派，提及降息空间，可能提振美股和BTC；若强调通胀仍具粘性需保持限制性利率，则美元走强、风险资产承压。需警惕其言论与此前市场预期出现明显分化。",
+      "detail": "FOMC Member Waller Speaks | 预期 - | 前值 -",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202611201500-usd-revised-uom-consumer-sentiment",
+      "start": "2026-11-20T23:00:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国密歇根大学消费者信心修正值",
+      "note": "衡量消费者对经济与个人财务状况的信心，预期52.1高于前值51.0，显示信心略有修复。数据好于预期通常提振消费和风险资产情绪；若不及预期，反映居民对经济前景担忧加深，可能拖累美股和BTC表现。",
+      "detail": "Revised UoM Consumer Sentiment | 预期 52.1 | 前值 51.0",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202611201500-usd-revised-uom-inflation-expectations",
+      "start": "2026-11-20T23:00:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 密歇根大学通胀预期修正值",
+      "note": "反映消费者对未来通胀走势的预期，前值4.3%处于较高水平。若修正值进一步上升，显示通胀担忧加剧，可能推迟市场对降息的预期，美元走强、BTC等风险资产承压；若回落，则有助缓解紧缩担忧，利好风险资产。",
+      "detail": "Revised UoM Inflation Expectations | 预期 - | 前值 4.3%",
+      "link": "",
+      "source": "calendar"
     },
     {
       "id": "ai-d37fc19a0828",
