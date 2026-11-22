@@ -1,36 +1,6 @@
 {
-  "updated": "2026-11-21T08:20:31+08:00",
+  "updated": "2026-11-22T08:20:29+08:00",
   "events": [
-    {
-      "id": "ai-b944d4c8c9fc",
-      "start": "2026-11-18T09:00:00+08:00",
-      "impact": "high",
-      "title": "特朗普、习近平、普京三边峰会",
-      "note": "三国领导人周四在三边峰会上据称寻求发布联合声明，议题涉及贸易政策、乌克兰战争及中东局势等。此类地缘政治峰会结果可能显著影响全球风险偏好、美元走势及大宗商品价格，进而波及BTC等风险资产，需关注声明内容是否涉及贸易关税或制裁变化。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://www.ft.com/content/e567ba7d-c53a-47a2-a361-3b8a107fcdef?syn-25a6b1a6=1",
-      "source": "news"
-    },
-    {
-      "id": "ai-6a84e26fb6d7",
-      "start": "2026-11-18T09:00:00+08:00",
-      "impact": "high",
-      "title": "Anthropic预计纳斯达克上市定价",
-      "note": "Anthropic预计周三进行IPO定价，股票随后在纳斯达克挂牌交易，加密交易者已将其价格押注高出26%。该事件已部分记录在已记录事件中（11-19 Anthropic纳斯达克上市），此处为定价环节，可能引发市场对AI估值和风险偏好的连锁反应，影响科技股及关联的加密资产情绪。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://beincrypto.com/how-to-buy-anthropic-ipo-ant-shares/",
-      "source": "news"
-    },
-    {
-      "id": "ff-202611181900-usd-fomc-meeting-minutes",
-      "start": "2026-11-19T03:00:00+08:00",
-      "impact": "high",
-      "title": "🇺🇸 美联储11月FOMC会议纪要",
-      "note": "公布11月议息会议的详细讨论内容，市场关注官员对通胀、就业及后续降息/加息路径的分歧。若纪要显示鹰派立场升温（如多名官员支持继续加息），将推升美元和美债收益率，打压美股和BTC等风险资产；若偏鸽派则相反。需警惕纪要与会后声明基调不一致导致的波动。",
-      "detail": "FOMC Meeting Minutes | 预期 - | 前值 -",
-      "link": "",
-      "source": "calendar"
-    },
     {
       "id": "ai-dd24ef31f9a5",
       "start": "2026-11-19T09:00:00+08:00",
@@ -90,6 +60,26 @@
       "detail": "Revised UoM Inflation Expectations | 预期 - | 前值 4.3%",
       "link": "",
       "source": "calendar"
+    },
+    {
+      "id": "ai-7fd606027bcd",
+      "start": "2026-11-22T09:00:00+08:00",
+      "impact": "medium",
+      "title": "俄罗斯放开比特币交易审批",
+      "note": "自11月22日起，俄罗斯交易所可在央行批准交易规则后开始比特币交易，受制裁的莫斯科交易所计划12月正式上线。目前客户仍不能用比特币支付消费。此举体现俄罗斯在制裁压力下推动国家管控下的加密市场建设，短期对全球加密市场影响有限，但需关注后续细则及是否助长监管套利。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://cryptoslate.com/russia-bitcoin-trading-rules-moscow-exchange/",
+      "source": "news"
+    },
+    {
+      "id": "ai-b284c217139d",
+      "start": "2026-11-23T09:00:00+08:00",
+      "impact": "medium",
+      "title": "Kalshi纽约法院听证会",
+      "note": "纽约法院周一（11月23日）将就一项可能导致Kalshi预测市场交易所关闭的命令举行听证会。Kalshi称该命令若生效将迫使其全国范围停止运营，纽约总检察长否认有此意图。结果将影响预测市场监管格局及相关代币化衍生品业务，需关注裁决是否波及其他预测市场平台。\n（新闻未给出具体时间，按当天 09:00 提醒）",
+      "detail": "",
+      "link": "https://www.theblock.co/news/regulation/2026-11-21-kalshi-faces-monday-hearing-on-new-york-order-it-says-would-shut-down-its-exchange-nationwide-444813",
+      "source": "news"
     },
     {
       "id": "ai-93ea629ec192",
