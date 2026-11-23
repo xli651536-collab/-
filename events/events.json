@@ -1,46 +1,6 @@
 {
-  "updated": "2026-11-22T08:20:29+08:00",
+  "updated": "2026-11-23T08:20:31+08:00",
   "events": [
-    {
-      "id": "ai-dd24ef31f9a5",
-      "start": "2026-11-19T09:00:00+08:00",
-      "impact": "high",
-      "title": "Anthropic纳斯达克上市",
-      "note": "AI巨头Anthropic计划于11月19日或20日在纳斯达克上市,估值高达1.75万亿美元。这是今年最大规模IPO之一,将重塑AI行业格局并影响投资者情绪。上市成功可能提振科技股和风险资产信心,但高估值也存在回调风险。需关注上市首日表现及对Nvidia等AI相关公司的连锁反应,以及监管机构对AI行业的审查态度变化。",
-      "detail": "",
-      "link": "https://cryptobriefing.com/anthropic-nasdaq-ipo-november-valuation-range/",
-      "source": "news"
-    },
-    {
-      "id": "ai-1a6fdc0ef349",
-      "start": "2026-11-19T09:00:00+08:00",
-      "impact": "medium",
-      "title": "500亿数据中心贷款竞价截止",
-      "note": "神秘卖方抛售包括Stargate相关债务的5亿美元数据中心贷款，竞价将于11月19日截止。该事件反映AI股崩盘后信贷市场风险重新定价，若流拍或低价成交，可能加剧市场对AI基建债务质量的担忧，波及科技股及关联加密资产情绪，需关注竞价结果及买方身份。\n（新闻未给出具体时间，按当天 09:00 提醒）",
-      "detail": "",
-      "link": "https://beincrypto.com/mystery-seller-data-center-loans-stargate/",
-      "source": "news"
-    },
-    {
-      "id": "ff-202611191330-usd-philly-fed-manufacturing-index",
-      "start": "2026-11-19T21:30:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美11月费城联储制造业指数",
-      "note": "衡量费城地区制造业活动景气度，预期20.6，与前值20.9基本持平，显示制造业扩张动能维持稳定。若大幅低于预期，可能加剧经济放缓担忧，利好降息预期，对美股和BTC偏正面；若明显超预期，则可能削弱降息预期，推升美元，压制风险资产。需警惕数据大幅偏离预期引发的波动。",
-      "detail": "Philly Fed Manufacturing Index | 预期 20.6 | 前值 20.9",
-      "link": "",
-      "source": "calendar"
-    },
-    {
-      "id": "ff-202611191330-usd-unemployment-claims",
-      "start": "2026-11-19T21:30:00+08:00",
-      "impact": "medium",
-      "title": "🇺🇸 美当周初请失业金人数",
-      "note": "预期19.8万，较前值20万略有改善，反映劳动力市场依然偏紧。数据若明显高于预期，意味着就业市场降温加速，可能强化降息押注，短期提振美股和BTC但也可能引发经济硬着陆担忧；若远低于预期，则可能打压降息预期，对美元偏多、对风险资产偏空。关注是否出现趋势性恶化。",
-      "detail": "Unemployment Claims | 预期 198K | 前值 200K",
-      "link": "",
-      "source": "calendar"
-    },
     {
       "id": "ff-202611201500-usd-revised-uom-consumer-sentiment",
       "start": "2026-11-20T23:00:00+08:00",
@@ -112,6 +72,26 @@
       "source": "news"
     },
     {
+      "id": "ff-202611231445-usd-flash-manufacturing-pmi",
+      "start": "2026-11-23T22:45:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国11月Markit制造业PMI初值",
+      "note": "衡量美国制造业景气度的先行指标，预期54.5，低于前值56.0，显示制造业扩张动能略有放缓。数值高于50仍代表扩张，若大幅低于预期会强化经济降温预期，利空美元、提振降息预期，对美股和BTC可能偏利好；若远超预期则可能推迟降息，压制风险资产。需警惕数据与服务业PMI背离造成的市场解读分歧。",
+      "detail": "Flash Manufacturing PMI | 预期 54.5 | 前值 56.0",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202611231445-usd-flash-services-pmi",
+      "start": "2026-11-23T22:45:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国11月Markit服务业PMI初值",
+      "note": "服务业占美国经济主导地位，预期55.6，低于前值57.9，显示服务业扩张有所降温。由于服务业权重大，该数据对综合PMI和经济增长预期影响更显著。弱于预期会加大经济放缓担忧，利空美元但可能提振降息预期，间接利好BTC等风险资产；需警惕价格分项数据反映的通胀压力是否上升。",
+      "detail": "Flash Services PMI | 预期 55.6 | 前值 57.9",
+      "link": "",
+      "source": "calendar"
+    },
+    {
       "id": "ai-fed02dfb4ff8",
       "start": "2026-11-24T09:00:00+08:00",
       "impact": "medium",
@@ -130,6 +110,66 @@
       "detail": "",
       "link": "",
       "source": "news"
+    },
+    {
+      "id": "ff-202611241500-usd-cb-consumer-confidence",
+      "start": "2026-11-24T23:00:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国11月谘商会消费者信心指数",
+      "note": "反映美国消费者对经济和就业前景的信心，预期92.1，略高于前值91.7，显示信心小幅改善。该数据对消费支出预期有参考意义，若大幅超预期可能被解读为经济韧性强，降低降息概率，短期利好美元、压制BTC等风险资产；若不及预期则相反。需关注消费者对通胀预期分项的变化。",
+      "detail": "CB Consumer Confidence | 预期 92.1 | 前值 91.7",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202611251330-usd-core-pce-price-index-m-m",
+      "start": "2026-11-25T21:30:00+08:00",
+      "impact": "high",
+      "title": "🇺🇸 美国10月核心PCE物价指数月率",
+      "note": "美联储最关注的通胀指标，预期0.3%，与前值持平，显示核心通胀压力未明显缓解。若数据高于预期，将强化美联储维持高利率立场，利好美元、打压美股和BTC等风险资产；若低于预期则加大降息预期，可能推动风险资产反弹。该数据是本周最重要的高影响事件，需密切关注市场波动。",
+      "detail": "Core PCE Price Index m/m | 预期 0.3% | 前值 0.3%",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202611251330-usd-prelim-gdp-q-q",
+      "start": "2026-11-25T21:30:00+08:00",
+      "impact": "high",
+      "title": "🇺🇸 美国三季度GDP初值（年化季率）",
+      "note": "衡量美国经济增长速度，预期3.5%，略高于前值3.4%，显示经济增长保持强劲。强劲的GDP数据可能被视为经济韧性信号，但也可能推迟降息预期，对美元偏利好，对高估值美股和BTC形成压力；若数据不及预期，则可能加剧市场对经济放缓的担忧，引发risk-off。需结合同时公布的PCE价格指数综合判断。",
+      "detail": "Prelim GDP q/q | 预期 3.5% | 前值 3.4%",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202611251330-usd-prelim-gdp-price-index-q-q",
+      "start": "2026-11-25T21:30:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国三季度GDP物价指数初值",
+      "note": "反映整体经济层面的价格变动，预期2.3%，与前值一致，显示通胀压力保持稳定。该指标与核心PCE同日公布，若明显高于预期会加重市场对持续通胀的担忧，推升美元、压制BTC等风险资产；若低于预期则可能缓解通胀焦虑，提振市场情绪。需结合GDP增速一并解读经济是否滞涨。",
+      "detail": "Prelim GDP Price Index q/q | 预期 2.3% | 前值 2.3%",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202611251330-usd-unemployment-claims",
+      "start": "2026-11-25T21:30:00+08:00",
+      "impact": "medium",
+      "title": "🇺🇸 美国至11月21日当周初请失业金人数",
+      "note": "反映美国劳动力市场即时健康状况，预期20.1万，低于前值20.3万，显示就业市场依然紧俏。数据若明显高于预期，会被视为劳动力市场降温信号，加大降息预期，短期可能提振BTC等风险资产但打压美元；若持续低位则支持美联储维持鹰派立场。需注意感恩节假期前后数据的季节性扰动。",
+      "detail": "Unemployment Claims | 预期 201K | 前值 203K",
+      "link": "",
+      "source": "calendar"
+    },
+    {
+      "id": "ff-202611262330-jpy-tokyo-core-cpi-y-y",
+      "start": "2026-11-27T07:30:00+08:00",
+      "impact": "medium",
+      "title": "🇯🇵 日本11月东京核心CPI年率",
+      "note": "东京CPI是全国CPI的领先指标，预期2.9%，明显高于前值2.6%，显示通胀压力加速上升。若数据符合或超预期，将强化日本央行进一步加息或收紧政策的预期，推动日元升值，可能引发日元套利交易平仓，对全球风险资产（包括BTC、美股）构成流动性收紧压力。需警惕日元大幅波动引发的跨市场连锁反应。",
+      "detail": "Tokyo Core CPI y/y | 预期 2.9% | 前值 2.6%",
+      "link": "",
+      "source": "calendar"
     }
   ]
 }
